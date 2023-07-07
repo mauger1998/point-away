@@ -8,21 +8,23 @@
     position:relative;
     .background-rocks {
         position:absolute;
-        width:75%;
+        width:100%;
         height:100%;
-        left:0;
+        inset:0;
         object-fit:cover;
     }
     background-color:white;
     .three-card-grid {
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
+        column-gap:4rem;
 
         .grid-item {
             display:flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
             h3 {
                 color:variables.$black;
                 margin-block-start:2rem;
@@ -37,12 +39,72 @@
                 color:variables.$black;
                 max-width:28ch;
                 text-wrap:balance;
-            }
+            } 
             
         }
+    }
+    @media(max-width:1024px) {
+        .three-card-grid {
+            grid-template-columns: 1fr 1fr;
+            row-gap:4rem;
+            column-gap:2rem;
 
-       
+            .grid-item {
+                width:100%;
+                &:nth-child(3) {
+                    grid-column: span 2;
+                    width:50%;
+                    place-self:center;
+                }
+                h3 {
+                    margin-block-start:1rem;
+                    margin-block-end:0.5rem;
+                }
+            }
 
-
+            .icon {
+                width:40px;
+            }
+        }
+    }
+    @media (max-width:350px) {
+            
+        .three-card-grid {
+            grid-template-columns: 1fr 1fr;
+            row-gap:4rem;
+            column-gap:1.5rem;
+            .grid-item {
+                &:nth-child(3) {
+                    grid-column: span 2;
+                    width:70%;
+                    place-self:center;
+                }
+                h3 {
+                    margin-block-start:1rem;
+                    margin-block-end:0.5rem;
+                }
+            }
+        }
+        
+    }
+    @media (max-width:338px) {
+            
+        .three-card-grid {
+            grid-template-columns: 1fr;
+            row-gap:4rem;
+            column-gap:1.5rem;
+            .grid-item {
+                &:nth-child(3) {
+                    grid-column: span 1;
+                    width:70%;
+                    place-self:center;
+                }
+                h3 {
+                    margin-block-start:1rem;
+                    margin-block-end:0.5rem;
+                }
+            }
+        }
+        
     }
 }

@@ -30,6 +30,49 @@ button {
         align-items: center;
         justify-content: center;
         transition:300ms ease-in-out;
+        
+        &:nth-child(2) {
+            font-family: baron;
+    
+        }
+    
+    }
+
+    @media (max-width:500px) {
+        &.primary-button {
+            color:white;
+            background-color:variables.$red;
+            border:2px solid variables.$red;
+            padding:1rem;
+
+
+            span {
+                
+                &:nth-child(2) {
+                    display:none;
+            
+                }
+            
+            }
+
+    
+        }
+        &.secondary-button {
+            color:white;
+            background-color:transparent;
+            border:2px solid variables.$red;
+            padding:1rem;
+            
+            span {
+                
+                &:nth-child(2) {
+                    display:none;
+            
+                }
+            
+            }
+    
+        }
     }
    
 }

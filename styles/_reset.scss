@@ -56,4 +56,18 @@ footer {
         max-width:1440px;
         padding:8rem 4rem;
     }
+
+    @media (max-width:700px) {
+        .wrapper {
+            padding-inline:2rem;
+        }
+    }
+
+    @media (max-width:500px) {
+        .wrapper {
+            padding-inline:1rem;
+        }
+    }
+
+
 }

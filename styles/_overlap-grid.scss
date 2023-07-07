@@ -61,4 +61,20 @@
         background-image:none !important;
 
     }
+
+    @media (max-width:700px) {
+        
+            .card-grid-item {
+                h3 {
+                    position:absolute;
+                    bottom:1rem;
+                    left:1rem !important;
+                    z-index:1001;
+                    max-width:16ch;
+                    text-align:left;
+                }
+            }
+        
+        
+    }
 }

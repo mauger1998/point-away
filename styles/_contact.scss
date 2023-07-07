@@ -4,6 +4,16 @@
 @use "./button";
 
 .contact-section {
+    position:relative;
+    .background-rocks {
+        position:absolute;
+        inset:0;
+        opacity:0.2;
+        z-index:-1;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
     .wrapper {
         display:flex;
         flex-direction: column;
@@ -51,5 +61,29 @@
                 align-self:start;
             }
         }
+    }
+    @media (max-width:1024px) {
+        .wrapper {
+            form {
+                width:65%;
+            }
+        }
+        
+    }
+    @media (max-width:500px) {
+        .wrapper {
+            form {
+                width:80%;
+            }
+        }
+        
+    }
+    @media (max-width:350px) {
+        .wrapper {
+            form {
+                width:100%;
+            }
+        }
+        
     }
 }
