@@ -64,4 +64,17 @@
             }
         }
     }
+
+    @media(max-width:700px) {
+        .wrapper {
+            .list-wrapper {
+                ul {
+                    li {
+                        font-size:clamp(variables.$mobile-h2 * 0.75, 10vw, variables.$mobile-h2);
+                        line-height:clamp(variables.$mobile-h2 * 0.75 * 1.2, 10vw * 1.2, variables.$mobile-h2 * 1.2)
+                    }
+                }
+            }
+        }
+    }
 }

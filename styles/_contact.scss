@@ -5,14 +5,13 @@
 
 .contact-section {
     position:relative;
-    .background-rocks {
-        position:absolute;
+    .background-rocks-long {
+        position:absolute !important;
         inset:0;
         opacity:0.2;
         z-index:-1;
-        width:100%;
-        height:100%;
-        object-fit:cover;
+        // width:100%;
+        // object-fit:cover;
     }
     .wrapper {
         display:flex;

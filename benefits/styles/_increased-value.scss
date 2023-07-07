@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+@use "../../styles/reset";
+@use "../../styles/fonts";
+@use "../../styles/button";
+
+.increased-value-section {
+    background-color:white;
+
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+            max-width:55ch;
+            text-wrap:balance;
+            margin-block:1rem 2rem;
+            color:variables.$black;
+        }
+
+        h2 {
+            color: variables.$black;
+        }
+    }
+    
+}
