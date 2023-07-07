@@ -16,6 +16,7 @@ main {
         & > svg {
             width:32rem;
             width:max(24rem, 45vw);
+            max-width:650px;
         }
 
         p {

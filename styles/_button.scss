@@ -11,7 +11,8 @@ button {
     cursor:pointer;
     border-radius:2rem;
     font-family:baron;
-    
+    transition:300ms ease-in-out;
+
     &.primary-button {
         color:white;
         background-color:variables.$red;
@@ -29,13 +30,10 @@ button {
         display:flex;
         align-items: center;
         justify-content: center;
-        transition:300ms ease-in-out;
-        
+
         &:nth-child(2) {
             font-family: baron;
-    
         }
-    
     }
 
     @media (max-width:500px) {
@@ -43,36 +41,23 @@ button {
             color:white;
             background-color:variables.$red;
             border:2px solid variables.$red;
-            padding:1rem;
-
-
-            span {
-                
+            span { 
                 &:nth-child(2) {
                     display:none;
-            
                 }
-            
             }
-
-    
         }
         &.secondary-button {
             color:white;
             background-color:transparent;
             border:2px solid variables.$red;
             padding:1rem;
-            
             span {
                 
                 &:nth-child(2) {
                     display:none;
-            
                 }
-            
             }
-    
         }
     }
-   
 }

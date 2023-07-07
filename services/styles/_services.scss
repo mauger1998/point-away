@@ -1,0 +1,67 @@
+@use "../../styles/variables";
+@use "../../styles/reset";
+@use "../../styles/fonts";
+@use "../../styles/button";
+
+.custom-services-section {
+    background-color:white;
+    position:relative;
+    z-index:0;
+
+    .background-rocks {
+        position:absolute;
+        z-index:-1;
+        opacity:0.2;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:8rem;
+
+        .services-titles {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2 {
+                color: variables.$black;
+            }
+
+            p {
+                max-width:50ch;
+                text-wrap:balance;
+                margin-block-start:2rem;
+                color: variables.$black;
+
+            }
+        }
+        .list-wrapper {
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:6rem;
+
+            ul {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap:4rem;
+
+                li {
+                    font-size:clamp(variables.$mobile-h2, 5vw, variables.$h2);
+                    font-family:baron;
+                    color: variables.$black;
+                    text-align:center;
+                }
+            }
+        }
+    }
+}

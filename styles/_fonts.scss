@@ -2,6 +2,22 @@
 
 // Fonts
 
+h1 {
+    font-size:variables.$h1;
+    color:white;
+    line-height: variables.$h1;
+    text-align:center;
+    font-family: baron;
+
+
+    span {
+        color:variables.$red;
+        text-align:center;
+        font-family: baron;
+
+    }
+}
+
 h2 {
     font-size:variables.$h2;
     color:white;
@@ -53,6 +69,10 @@ p {
         p {
             font-size:variables.$mobile-base-font;
             line-height: variables.$mobile-base-font * 1.6 !important;
+        }
+        h1 {
+            font-size:variables.$mobile-h1;
+            line-height: variables.$mobile-h1 * 1.2;
         }
         h2 {
             font-size:variables.$mobile-h2;
