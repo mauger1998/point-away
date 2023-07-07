@@ -1,0 +1,55 @@
+@use "./variables";
+@use "./reset";
+@use "./fonts";
+@use "./button";
+
+.contact-section {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:4rem;
+
+        .contact-titles {
+            h2 {
+                max-width:16ch;
+            }
+        }
+
+        form {
+            width:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:40%;
+            fieldset {
+                border:0;
+                display:flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width:100%;
+                gap:0.5rem;
+
+                label {
+                    margin-block-start:1rem;
+                }
+
+                input,
+                textarea {
+                    width:100%;
+                    padding:0.5rem;
+                    background: #151515;
+                    border:none;
+                    border-radius:0.25rem;
+                }
+            }
+
+            button {
+                margin-block-start:2rem;
+                align-self:start;
+            }
+        }
+    }
+}

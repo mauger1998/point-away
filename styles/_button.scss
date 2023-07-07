@@ -1,0 +1,35 @@
+@use "./variables";
+
+button {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding:0.5rem 1rem;
+    font-weight:700;
+    transition:opacity 500ms;
+    cursor:pointer;
+    border-radius:2rem;
+    font-family:baron;
+    
+    &.primary-button {
+        color:white;
+        background-color:variables.$red;
+        border:2px solid variables.$red;
+
+    }
+    &.secondary-button {
+        color:white;
+        background-color:transparent;
+        border:2px solid variables.$red;
+        
+
+    }
+    span {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        transition:300ms ease-in-out;
+    }
+   
+}

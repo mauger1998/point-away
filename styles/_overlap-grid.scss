@@ -1,0 +1,64 @@
+@use "./variables";
+@use "./reset";
+@use "./fonts";
+@use "./button";
+
+.overlap-card-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+
+   
+
+    .card-grid-item {
+        position:relative;
+
+        &:nth-child(1) {
+            margin-right:-4rem;
+            transform:translateY(2rem);
+            &::after {
+                content:"";
+                width:200%;
+                position:absolute;
+                inset:0;
+                z-index:1000;
+                background-image:linear-gradient(to top, #030303, #03030300 25%);
+            }
+        }
+        &:nth-child(2) {
+            margin-left:-4rem;
+
+            &::after {
+                content:"";
+                width:200%;
+                position:absolute;
+                inset:0;
+                z-index:1000;
+                background-image:linear-gradient(to top, #030303, #03030300 25%);
+
+            }
+        }
+
+       
+
+      
+
+        img {
+            position:relative;
+            width:100%;
+
+        }
+
+        h3 {
+            position:absolute;
+            bottom:1rem;
+            left:2rem;
+            z-index:1001;
+            max-width:16ch;
+            text-align:left;
+        }
+    }
+    .no-gradient::after {
+        background-image:none !important;
+
+    }
+}

@@ -1,0 +1,35 @@
+@use "./variables";
+@use "./reset";
+@use "./fonts";
+@use "./button";
+@use "./header";
+
+main {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-block-start:8rem;
+        padding-block-end:12rem;
+
+        & > svg {
+            width:32rem;;
+        }
+
+        p {
+            max-width:55ch;
+            text-wrap:balance;
+            margin-block-start:2rem;
+            margin-block-end:4rem;
+        }
+    }
+
+    .background-rocks {
+        position:absolute;
+        width:50%;
+        right:0;
+        z-index:-1;
+        opacity:0.2;
+    }
+}
