@@ -17,6 +17,7 @@
 @use "./animations";
 
 html,
-body {
+body,
+section {
     overflow-x:hidden !important;
 }
