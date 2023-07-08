@@ -8,24 +8,27 @@
     .wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr;
-        column-gap:2rem;
 
         .column {
             display:flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding:2rem;
+            padding-block:2rem;
 
+            &:nth-child(1) {
+                padding-right:2rem;
+            }
             &:nth-child(2) {
                 border-left:0.5px solid white;
+                padding-left:2rem;
             }
 
            
 
             p {
                 margin-block:1rem 2rem;
-                max-width:60ch;
+                max-width:48ch;
                 text-wrap:balance;
             }
         }
@@ -37,8 +40,14 @@
             gap:4rem;
 
             .column {
+                &:nth-child(1) {
+                    padding-right:0rem;
+                }
+                
                  &:nth-child(2) {
                     border-left:none;
+                    padding-left:0rem;
+
                  }
 
                  p {

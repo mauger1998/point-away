@@ -3,7 +3,9 @@
 @use "./fonts";
 @use "./button";
 @use "./header";
+@use "./dropdown";
 @use "./main";
+@use "./video";
 @use "./three-card-grid";
 @use "./overlap-grid";
 @use "./two-columns";
@@ -12,5 +14,6 @@
 @use "./contact";
 @use "./footer";
 @use "./contact-information";
+@use "./animations";
 
 

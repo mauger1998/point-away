@@ -7,11 +7,34 @@ button {
     gap:1rem;
     padding:0.5rem 1rem;
     font-weight:700;
-    transition:opacity 500ms;
+    // transition:opacity 500ms;
     cursor:pointer;
     border-radius:2rem;
     font-family:baron;
-    transition:300ms ease-in-out;
+    // transition:300ms ease-in-out;
+    z-index:100;
+
+    &:hover .slider .slide {
+        transform:translateY(-1rem);
+        transition:transform 200ms ease-in-out;
+    }
+
+    .slider {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow:hidden;
+        max-height:1rem;
+
+        .slide {
+            font-family:baron;
+            font-size: variables.$tagline-font;
+            transition:transform 200ms ease-out;
+            
+
+        }
+
+    }
 
     &.primary-button {
         color:white;
@@ -43,7 +66,6 @@ button {
             border:2px solid variables.$red;
             span { 
                 &:nth-child(2) {
-                    display:none;
                 }
             }
         }
@@ -55,7 +77,6 @@ button {
             span {
                 
                 &:nth-child(2) {
-                    display:none;
                 }
             }
         }

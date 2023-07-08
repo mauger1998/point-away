@@ -60,6 +60,17 @@
                     font-family:baron;
                     color: variables.$black;
                     text-align:center;
+                    position:relative;
+
+                    .line-cover {
+                        position:absolute;
+                        right:0;
+                        top:0;
+                        height:variables.$h2;
+                        width:100%;
+                        background-color:#ffffff9b;
+                        transform-origin: right;
+                    }
                 }
             }
         }

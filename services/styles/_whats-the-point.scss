@@ -90,10 +90,13 @@
 
             h3 {
                 text-align: left;
+                max-width:10ch;
             }
 
             p {
                 text-align: left;
+                max-width:30ch;
+                text-wrap:balance;
             }
         }
     }

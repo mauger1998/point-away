@@ -10,14 +10,16 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-block-start:8rem;
-        padding-block-end:12rem;
+        padding-block-start:12rem;
+        padding-block-end:14rem;
 
-        & > svg {
-            width:32rem;
-            width:max(24rem, 45vw);
-            max-width:650px;
-        }
+        & > .svg-wrapper {
+            svg {
+                width:28rem;
+                width:max(22rem, 42vw);
+                max-width:650px;
+            }
+        } 
 
         p {
             max-width:45ch;

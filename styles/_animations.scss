@@ -1,0 +1,95 @@
+@use "./variables";
+@use "./reset";
+@use "./fonts";
+@use "./button";
+
+main {
+    .wrapper {
+        .mask {
+            .word {
+                overflow:hidden;
+
+                .char {
+                    transform:translateY(-350%);
+                }
+            }
+        }
+        .svg-wrapper {
+            overflow-y:hidden;
+
+            & > svg {
+                transform:translateY(-10rem);
+            }
+        }
+
+        a {
+            overflow:hidden;
+            button {
+                transform:translateY(-6rem);
+            }
+        }       
+    }
+}
+
+.three-card-grid {
+    .grid-item {
+        .svg-mask {
+            overflow-y:hidden;
+            .icon {
+                transform:translateY(-6rem);
+            }
+        } 
+        .word {
+            .char {
+                transform:translateY(-220%);
+            }   
+        }         
+    }
+}
+
+.restoration-section  {
+    .wrapper {
+        .restoration-titles {
+            h2 {
+
+                .word {
+                    .char {
+                        transform:translateY(-4rem);
+                    }
+                }   
+            }
+        }
+    }
+}
+.heritage {
+    .wrapper {
+        .restoration-titles {
+            h2 {
+                .word {
+                    overflow-y:hidden;
+                    .char {
+                        transform:translateY(-4rem);
+                    }
+                }
+            }
+        }
+    }
+}
+.overlap-card-grid {
+    .card-grid-item {
+
+        &:nth-child(1) {
+            // transform:translateX(10%);
+            transform:translateY(2rem) translateX(30%);
+            scale:0.8;
+
+        }
+        &:nth-child(2) {
+            transform:translateX(-30%);
+            scale:0.8;
+        }
+        img {
+        }
+    }
+    
+}

@@ -9,12 +9,10 @@ h1 {
     text-align:center;
     font-family: baron;
 
-
     span {
         color:variables.$red;
         text-align:center;
         font-family: baron;
-
     }
 }
 
@@ -25,14 +23,12 @@ h2 {
     text-align:center;
     font-family: baron;
 
-
     span {
         color:variables.$red;
         text-align:center;
         font-family: baron;
-
     }
-
+   
     &.h2 {
         
             max-width:16ch;
@@ -42,13 +38,13 @@ h2 {
         
     }
 }
+
 h3 {
     font-size:variables.$h3;
     color:white;
     line-height: variables.$h3;
     text-align:center;
     font-family: baron;
-
 
     span {
         color:variables.$red;
@@ -57,20 +53,56 @@ h3 {
 
     }
 }
+
 p {
     font-size:variables.$base-font;
     color:white;
     line-height: variables.$base-font * 1.6;
     text-align:center;
 
-
     &.tagline {
         font-size:variables.$tagline-font;
         line-height: variables.$tagline-font *1.6;
         text-align:center;
         font-family: baron;
-
     }
+}
+
+h1 {
+    .word {
+        overflow-y:hidden;
+        .char {
+            font-family:baron;
+            font-size:variables.$h1;
+            line-height: variables.$h1;
+            text-align:center;
+        }
+    }
+    
+}
+h2 {
+    .word {
+        overflow-y:hidden;
+        .char {
+            font-family:baron;
+            font-size:variables.$h2;
+            line-height: variables.$h2;
+            text-align:center;
+        }
+    }
+
+}
+h3 {
+    .word {
+        overflow-y:hidden;
+        .char {
+            font-family:baron;
+            font-size:variables.$h3;
+            line-height: variables.$h3;
+            text-align:center;
+        }
+    }
+    
 }
 
 @media (max-width:1024px) {
@@ -104,7 +136,7 @@ p {
         }
         h1 {
             font-size:clamp(variables.$mobile-h1 * 0.70, 8vw ,variables.$mobile-h1);
-            line-height: clamp(variables.$mobile-h1 * 0.70 * 1.2, 10vw * 1.2 ,variables.$mobile-h1 * 1.2)
+            line-height: clamp(variables.$mobile-h1 * 0.70, 10vw ,variables.$mobile-h1)
         }
         h2 {
             font-size:variables.$mobile-h2;

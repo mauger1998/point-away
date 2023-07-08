@@ -4,6 +4,10 @@
 @use "./button";
 
 header {
+    position:fixed;
+    z-index:1000;
+    // background-color:#ffffff00;
+
     .header-wrapper {
         padding:1rem 4rem;
         width:100%;
@@ -26,10 +30,14 @@ header {
         .menu {
             display:none;
             width:40px;
+            cursor:pointer;
         }
     }
 
     @media (max-width:1024px) {
+        & {
+            mix-blend-mode:difference !important;
+        }
         nav {
             display:none;
         }
