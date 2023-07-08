@@ -14,7 +14,7 @@
 
         &:nth-child(1) {
             margin-right:-4rem;
-            transform:translateY(2rem);
+            transform:translateX(2rem);
             &::after {
                 content:"";
                 width:200%;

@@ -72,6 +72,12 @@ footer .wrapper {
   }
 }
 
+.word,
+.line,
+.char {
+  flex-wrap: none !important;
+}
+
 h1 {
   font-size: 60px;
   color: white;
@@ -84,11 +90,28 @@ h1 span {
   text-align: center;
   font-family: baron;
 }
+h1 .char,
+h1 .word,
+h1 .line {
+  font-size: 60px;
+  color: white;
+  line-height: 60px;
+  text-align: center;
+  font-family: baron;
+}
 
 h2 {
   font-size: 48px;
   color: white;
   line-height: 48px;
+  text-align: center;
+  font-family: baron;
+}
+h2 .char,
+h2 .word,
+h2 .line {
+  font-size: 48px !important;
+  line-height: 0px !important;
   text-align: center;
   font-family: baron;
 }
@@ -102,6 +125,13 @@ h2.h2 {
   font-size: clamp(40px, 3.5vw, 48px) !important;
   line-height: clamp(48px, 4.2vw, 57.6px) !important;
 }
+h2.h2 .char,
+h2.h2 .word,
+h2.h2 .line {
+  max-width: 16ch;
+  font-size: clamp(40px, 3.5vw, 48px) !important;
+  line-height: clamp(40px, 3.5vw, 48px) !important;
+}
 
 h3 {
   font-size: 32px;
@@ -112,6 +142,14 @@ h3 {
 }
 h3 span {
   color: #E2090B;
+  text-align: center;
+  font-family: baron;
+}
+h3 .char,
+h3 .word,
+h3 .line {
+  font-size: 32px !important;
+  line-height: 32px !important;
   text-align: center;
   font-family: baron;
 }
@@ -127,6 +165,14 @@ p.tagline {
   line-height: 22.4px;
   text-align: center;
   font-family: baron;
+}
+p .char,
+p .word,
+p .line {
+  font-size: 16px;
+  color: white;
+  line-height: 22.4px;
+  text-align: center;
 }
 
 h1 .word {
@@ -144,8 +190,8 @@ h2 .word {
 }
 h2 .word .char {
   font-family: baron;
-  font-size: 48px;
-  line-height: 48px;
+  font-size: 48px !important;
+  line-height: 48px !important;
   text-align: center;
 }
 
@@ -154,8 +200,8 @@ h3 .word {
 }
 h3 .word .char {
   font-family: baron;
-  font-size: 32px;
-  line-height: 32px;
+  font-size: 32px !important;
+  line-height: 22.4px !important;
   text-align: center;
 }
 
@@ -165,11 +211,24 @@ h3 .word .char {
     font-size: clamp(30px, 3.5vw, 40px) !important;
     line-height: clamp(36px, 4.2vw, 48px) !important;
   }
+  h2.h2 .char,
+  h2.h2 .word,
+  h2.h2 .line {
+    max-width: 16ch;
+    font-size: clamp(30px, 3.5vw, 40px) !important;
+    line-height: clamp(30px, 3.5vw, 40px) !important;
+  }
 }
 @media (max-width: 855px) {
   h2.h2 {
     font-size: 40px !important;
     line-height: 48px !important;
+  }
+  h2.h2 .char,
+  h2.h2 .word,
+  h2.h2 .line {
+    font-size: 40px !important;
+    line-height: 40px !important;
   }
 }
 @media (max-width: 700px) {
@@ -177,7 +236,17 @@ h3 .word .char {
     font-size: 14px;
     line-height: 22.4px !important;
   }
+  .wrapper p .char,
+  .wrapper p .word,
+  .wrapper p .line {
+    font-size: 14px !important;
+    line-height: 19.6px !important;
+  }
   .wrapper h1 {
+    font-size: clamp(33.6px, 8vw, 48px);
+    line-height: clamp(33.6px, 10vw, 48px);
+  }
+  .wrapper h1.char, .wrapper h1.word, .wrapper h1.line {
     font-size: clamp(33.6px, 8vw, 48px);
     line-height: clamp(33.6px, 10vw, 48px);
   }
@@ -185,15 +254,33 @@ h3 .word .char {
     font-size: 40px;
     line-height: 48px;
   }
+  .wrapper h2 .char,
+  .wrapper h2 .word,
+  .wrapper h2 .line {
+    font-size: 40px !important;
+    line-height: 40px !important;
+  }
   .wrapper h3 {
     font-size: 20px;
     line-height: 24px;
+  }
+  .wrapper h3 .char,
+  .wrapper h3 .word,
+  .wrapper h3 .line {
+    font-size: 20px !important;
+    line-height: 20px !important;
   }
 }
 @media (max-width: 700px) and (max-width: 468px) {
   h2.h2 {
     font-size: clamp(28px, 8.25vw, 40px) !important;
     line-height: clamp(36px, 4.2vw, 48px) !important;
+  }
+  h2.h2 .char,
+  h2.h2 .word,
+  h2.h2 .line {
+    font-size: clamp(28px, 8.25vw, 40px) !important;
+    line-height: clamp(33px, 3.85vw, 44px) !important;
   }
 }
 button {
