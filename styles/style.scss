@@ -16,4 +16,7 @@
 @use "./contact-information";
 @use "./animations";
 
-
+html,
+body {
+    overflow-x:hidden !important;
+}
