@@ -575,6 +575,46 @@ main .background-rocks {
   }
 }
 
+main .wrapper .mask .word {
+  overflow: hidden;
+}
+main .wrapper .mask .word .char {
+  transform: translateY(-350%);
+}
+main .wrapper .svg-wrapper {
+  overflow-y: hidden;
+}
+main .wrapper .svg-wrapper > svg {
+  transform: translateY(-10rem);
+}
+main .wrapper a {
+  overflow: hidden;
+}
+main .wrapper a button {
+  transform: translateY(-6rem);
+}
+
+.three-card-grid .grid-item .svg-mask {
+  overflow-y: hidden;
+}
+.heritage .wrapper .restoration-titles h2 .word {
+  overflow-y: hidden;
+}
+
+.overlap-card-grid .card-grid-item:nth-child(1) {
+  transform: translateY(2rem) translateX(6rem);
+}
+.overlap-card-grid .card-grid-item:nth-child(2) {
+  transform: translateX(-6rem);
+}
+@media (max-width: 885px) {
+  .overlap-card-grid .card-grid-item:nth-child(1) {
+    transform: translateY(2rem) translateX(6rem);
+  }
+  .overlap-card-grid .card-grid-item:nth-child(2) {
+    transform: translateX(-6rem);
+  }
+}
 .cta-section .wrapper {
   display: flex;
   flex-direction: column;
