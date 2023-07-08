@@ -112,14 +112,6 @@ h2 {
   text-align: center;
   font-family: baron;
 }
-h2 .char,
-h2 .word,
-h2 .line {
-  font-size: 48px !important;
-  line-height: 0px !important;
-  text-align: center;
-  font-family: baron;
-}
 h2 span {
   color: #E2090B;
   text-align: center;
@@ -129,13 +121,6 @@ h2.h2 {
   max-width: 16ch;
   font-size: clamp(40px, 3.5vw, 48px) !important;
   line-height: clamp(48px, 4.2vw, 57.6px) !important;
-}
-h2.h2 .char,
-h2.h2 .word,
-h2.h2 .line {
-  max-width: 16ch;
-  font-size: clamp(40px, 3.5vw, 48px) !important;
-  line-height: clamp(40px, 3.5vw, 48px) !important;
 }
 
 h3 {
@@ -147,14 +132,6 @@ h3 {
 }
 h3 span {
   color: #E2090B;
-  text-align: center;
-  font-family: baron;
-}
-h3 .char,
-h3 .word,
-h3 .line {
-  font-size: 32px !important;
-  line-height: 32px !important;
   text-align: center;
   font-family: baron;
 }
@@ -190,50 +167,17 @@ h1 .word .char {
   text-align: center;
 }
 
-h2 .word {
-  overflow-y: hidden;
-}
-h2 .word .char {
-  font-family: baron;
-  font-size: 48px !important;
-  line-height: 48px !important;
-  text-align: center;
-}
-
-h3 .word {
-  overflow-y: hidden;
-}
-h3 .word .char {
-  font-family: baron;
-  font-size: 32px !important;
-  line-height: 22.4px !important;
-  text-align: center;
-}
-
 @media (max-width: 1024px) {
   h2.h2 {
     max-width: 16ch;
     font-size: clamp(30px, 3.5vw, 40px) !important;
     line-height: clamp(36px, 4.2vw, 48px) !important;
   }
-  h2.h2 .char,
-  h2.h2 .word,
-  h2.h2 .line {
-    max-width: 16ch;
-    font-size: clamp(30px, 3.5vw, 40px) !important;
-    line-height: clamp(30px, 3.5vw, 40px) !important;
-  }
 }
 @media (max-width: 855px) {
   h2.h2 {
     font-size: 40px !important;
     line-height: 48px !important;
-  }
-  h2.h2 .char,
-  h2.h2 .word,
-  h2.h2 .line {
-    font-size: 40px !important;
-    line-height: 40px !important;
   }
 }
 @media (max-width: 700px) {
@@ -259,33 +203,15 @@ h3 .word .char {
     font-size: 40px;
     line-height: 48px;
   }
-  .wrapper h2 .char,
-  .wrapper h2 .word,
-  .wrapper h2 .line {
-    font-size: 40px !important;
-    line-height: 40px !important;
-  }
   .wrapper h3 {
     font-size: 20px;
     line-height: 24px;
-  }
-  .wrapper h3 .char,
-  .wrapper h3 .word,
-  .wrapper h3 .line {
-    font-size: 20px !important;
-    line-height: 20px !important;
   }
 }
 @media (max-width: 700px) and (max-width: 468px) {
   h2.h2 {
     font-size: clamp(28px, 8.25vw, 40px) !important;
     line-height: clamp(36px, 4.2vw, 48px) !important;
-  }
-  h2.h2 .char,
-  h2.h2 .word,
-  h2.h2 .line {
-    font-size: clamp(28px, 8.25vw, 40px) !important;
-    line-height: clamp(33px, 3.85vw, 44px) !important;
   }
 }
 button {
@@ -301,7 +227,7 @@ button {
   z-index: 100;
 }
 button:hover .slider .slide {
-  transform: translateY(-1rem);
+  transform: translateY(-0.9rem);
   transition: transform 200ms ease-in-out;
 }
 button .slider {
@@ -309,7 +235,7 @@ button .slider {
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
-  max-height: 1rem;
+  max-height: 0.9rem;
 }
 button .slider .slide {
   font-family: baron;
@@ -853,7 +779,7 @@ main .background-rocks {
   color: #030303;
 }
 .seafront-sunday-section .wrapper p {
-  max-width: 60ch;
+  max-width: 45ch;
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
   -webkit-margin-after: 2rem;
