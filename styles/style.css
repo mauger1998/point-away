@@ -78,6 +78,11 @@ footer .wrapper {
   flex-wrap: none !important;
 }
 
+html,
+body {
+  overflow-x: hidden !important;
+}
+
 h1 {
   font-size: 60px;
   color: white;
