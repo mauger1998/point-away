@@ -80,3 +80,8 @@ footer {
 .char {
     flex-wrap:none !important;
 }
+
+html,
+body {
+    overflow-x:hidden;
+}
