@@ -47,7 +47,7 @@ gsap.to("main .wrapper .svg-wrapper svg", {
   Power1.ease,
 })
 
-let textLines = document.querySelectorAll(".text1")
+let textLines = document.querySelectorAll(".text1, .text2")
 let firstSplit;
 
 
@@ -56,8 +56,6 @@ textLines.forEach(textLine => {
       type: "chars"
   })
 })
-
-
 gsap.to("main .char", {
 y: 0,
 stagger: 0.005,
@@ -67,11 +65,6 @@ ease:
 Power1.ease,
 
 })
-
-
-
-
-
 gsap.to("main .wrapper a button", {
   y:0,
   delay:1.75,
@@ -100,7 +93,6 @@ duration:0.75,
 delay:0.3,
 ease:
 Power1.ease,
-
 })
 
 
@@ -221,8 +213,6 @@ function mqHandler(e) {
     e.matches ? 'large' : 'not large'
   );
   video.setAttribute("poster", "public/images/before-grid-one.png")
-  
- 
 }
 
 

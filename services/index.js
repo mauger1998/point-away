@@ -30,3 +30,33 @@ gsap.to(".line-cover", {
     width:0,
     stagger:0.75,
   });
+
+  let textLines = document.querySelectorAll(".text1, .text2")
+  let firstSplit;
+  
+  
+  textLines.forEach(textLine => {
+    firstSplit = new SplitType(textLine, {
+        type: "chars"
+    })
+  })
+  gsap.to("main .char", {
+  y: 0,
+  stagger: 0.005,
+  duration:0.5,
+  delay:0.6,
+  ease:
+  Power1.ease,
+  
+  })
+  gsap.to("main .wrapper a button", {
+    y:0,
+    delay:1.75,
+    duration:0.400,
+    ease:
+    Power1.ease,
+  })
+
+window.addEventListener("resize", (e) => {
+    SplitType.revert('.text1, .text2')
+  })

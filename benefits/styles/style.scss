@@ -11,3 +11,33 @@
 @use "../../styles/animations";
 @use "../../services/styles/cta";
 @use "../../styles/footer";
+
+
+main {
+    height:100vh;
+    max-height:850px;
+
+    .wrapper {
+        h1 {
+            span {
+
+                .char {
+                    color:variables.$red !important;
+                }
+            }
+          
+        }
+        .line {
+            width:100%;
+
+        }
+        .word {
+            overflow:hidden;
+            .char {
+                transform:translateY(4rem);
+
+            }
+        }
+       
+    }
+}

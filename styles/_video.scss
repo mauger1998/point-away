@@ -5,15 +5,23 @@
 
 
 .video-section {
+    overflow:hidden !important;
+
     .wrapper {
         margin-top:-12rem;
+   
+
         video {
+            background-color:white;
+            border:2px solid white;
             width:100%;
             height:100vh;
             max-height:800px;
             object-fit:cover;
             scale:0.5;
             opacity:0;
+            overflow:hidden !important;
+
         }
     }
 }

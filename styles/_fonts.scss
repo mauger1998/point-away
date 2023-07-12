@@ -154,13 +154,12 @@ h1 {
         }
         h1 {
             font-size:clamp(variables.$mobile-h1 * 0.70, 8vw ,variables.$mobile-h1);
-            line-height: clamp(variables.$mobile-h1 * 0.70, 10vw ,variables.$mobile-h1);
-
-            &.char,
-            &.word,
-            &.line {
+            line-height: clamp(variables.$mobile-h1 * 0.70 * 1.2, 10vw * 1.2 ,variables.$mobile-h1 * 1.2);
+            .char,
+            .word,
+            .line {
                 font-size:clamp(variables.$mobile-h1 * 0.70, 8vw ,variables.$mobile-h1);
-                line-height: clamp(variables.$mobile-h1 * 0.70, 10vw ,variables.$mobile-h1);
+                line-height: clamp(variables.$mobile-h1 * 0.70, 10vw  ,variables.$mobile-h1 );
             }
         }
         h2 {

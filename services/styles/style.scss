@@ -9,3 +9,29 @@
 @use "./whats-the-point";
 @use "./cta";
 @use "../../styles/footer";
+
+main {
+    height:100vh;
+    max-height:850px;
+
+    .wrapper {
+        h1 {
+            span {
+
+                .char {
+                    color:variables.$red !important;
+
+                }
+            }
+          
+        }
+        .word {
+            overflow:hidden;
+
+            .char {
+                transform:translateY(4rem);
+            }
+        }
+       
+    }
+}

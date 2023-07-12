@@ -13,7 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: inter;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -193,9 +193,11 @@ h1 .word .char {
   }
   .wrapper h1 {
     font-size: clamp(33.6px, 8vw, 48px);
-    line-height: clamp(33.6px, 10vw, 48px);
+    line-height: clamp(40.32px, 12vw, 57.6px);
   }
-  .wrapper h1.char, .wrapper h1.word, .wrapper h1.line {
+  .wrapper h1 .char,
+  .wrapper h1 .word,
+  .wrapper h1 .line {
     font-size: clamp(33.6px, 8vw, 48px);
     line-height: clamp(33.6px, 10vw, 48px);
   }
@@ -427,6 +429,9 @@ header .header-wrapper .menu {
     grid-template-columns: 1fr;
   }
 }
+main {
+  overflow: hidden !important;
+}
 main .wrapper {
   display: flex;
   flex-direction: column;
@@ -436,6 +441,7 @@ main .wrapper {
           padding-block-start: 12rem;
   -webkit-padding-after: 14rem;
           padding-block-end: 14rem;
+  overflow: hidden !important;
 }
 main .wrapper > .svg-wrapper svg {
   width: 28rem;
@@ -456,6 +462,7 @@ main .background-rocks {
   right: 0;
   z-index: -1;
   opacity: 0.2;
+  overflow: hidden !important;
 }
 @media (max-width: 500px) {
   main .wrapper > svg {
@@ -805,4 +812,21 @@ footer .wrapper .footer-bottom a svg {
   footer .wrapper .footer-bottom a {
     align-items: center;
   }
+}
+
+main {
+  height: 100vh;
+  max-height: 850px;
+}
+main .wrapper h1 span .char {
+  color: #E2090B !important;
+}
+main .wrapper .line {
+  width: 100%;
+}
+main .wrapper .word {
+  overflow: hidden;
+}
+main .wrapper .word .char {
+  transform: translateY(4rem);
 }/*# sourceMappingURL=style.css.map */
