@@ -649,6 +649,27 @@ main .wrapper a button {
     transform: translateX(-6rem);
   }
 }
+.cost-section {
+  background-color: white;
+  position: relative;
+}
+.cost-section .wrapper {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 12rem;
+}
+.cost-section .wrapper h2 {
+  max-width: 16ch;
+  -webkit-margin-after: 2rem;
+          margin-block-end: 2rem;
+}
+.cost-section .wrapper p {
+  max-width: 50ch;
+}
+
 .cta-section .wrapper {
   display: flex;
   flex-direction: column;

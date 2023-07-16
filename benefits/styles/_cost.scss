@@ -1,0 +1,21 @@
+@use "../../styles/variables";
+
+.cost-section {
+    background-color:white;
+    position:relative;
+    .wrapper {
+        text-align:center;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-block:12rem;
+        h2 {
+            max-width:16ch;
+            margin-block-end:2rem;
+        }
+        p {
+            max-width:50ch;
+        }
+    }
+}

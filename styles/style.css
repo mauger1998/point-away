@@ -844,18 +844,8 @@ main .background-rocks {
 }
 
 .seafront-sunday-section {
-  position: relative;
   background-color: #ffffff;
-}
-.seafront-sunday-section > .noise {
-  position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
+  position: relative;
 }
 .seafront-sunday-section .background-rocks {
   position: absolute;
