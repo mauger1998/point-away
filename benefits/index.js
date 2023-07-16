@@ -64,7 +64,7 @@ mm.add("(min-width: 801px)", () =>  {
     x: 0,
     stagger: 0.1,
     ease:
-    Power1.ease,
+    "Power4.ease",
     scale:1,
     
     })
@@ -82,7 +82,7 @@ mm.add("(min-width: 801px)", () =>  {
     x: 0,
     stagger: 0.1,
     ease:
-    Power1.ease,
+    "Power4.ease",
     scale:1,
     
     })

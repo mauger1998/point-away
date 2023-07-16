@@ -37,13 +37,13 @@ button {
     }
 
     &.primary-button {
-        color:white;
+        color:variables.$white;
         background-color:variables.$red;
         border:2px solid variables.$red;
 
     }
     &.secondary-button {
-        color:white;
+        color:variables.$red;
         background-color:transparent;
         border:2px solid variables.$red;
         
@@ -61,7 +61,7 @@ button {
 
     @media (max-width:500px) {
         &.primary-button {
-            color:white;
+            color:variables.$white;
             background-color:variables.$red;
             border:2px solid variables.$red;
             span { 
@@ -70,7 +70,7 @@ button {
             }
         }
         &.secondary-button {
-            color:white;
+            color:variables.$white;
             background-color:transparent;
             border:2px solid variables.$red;
             padding:1rem;

@@ -5,6 +5,16 @@
 
 footer {
     position:relative;
+    & > .noise {
+        position:absolute;
+        mix-blend-mode:multiply;
+        opacity:0.05;
+        height:100%;
+        width:100%;
+        object-fit:cover;
+        pointer-events:none;
+
+    }
     .background-rocks {
         position:absolute;
         inset:0;
@@ -84,9 +94,9 @@ footer {
         }
 
         .footer-bottom {
-            border-block-start:0.5px solid white;
+            border-block-start:0.5px solid variables.$white;
             width:100%;
-            color:white;
+            color:variables.$white;
             display:flex;
             align-items: flex-end;
             justify-content: space-between;

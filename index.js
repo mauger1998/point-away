@@ -85,14 +85,13 @@ gsap.from(".three-card-grid .icon", {
     trigger: ".three-card-grid .icon",
     start: "top bottom", // when the top of the trigger hits the top of the viewport
     scrub: 1,
-    end:"+=400px"
+    end:"+=500px"
   },
-yPercent: -220,
+yPercent: -120,
 stagger: 0.25,
-duration:0.75,
 delay:0.3,
 ease:
-Power1.ease,
+"Power4.ease",
 })
 
 
@@ -111,7 +110,21 @@ gsap.to(".restoration-section .overlap-card-grid .card-grid-item", {
 x: 0,
 stagger: 0.1,
 ease:
-Power1.ease,
+"Power4.ease",
+scale:1,
+
+})
+gsap.to(".about-luke-section .overlap-card-grid .card-grid-item", {
+  scrollTrigger: {
+    trigger: ".about-luke-section .overlap-card-grid .card-grid-item",
+    start: "top bottom", // when the top of the trigger hits the top of the viewport
+    scrub: 1,
+    end:"+=500px"
+  },
+x: 0,
+stagger: 0.1,
+ease:
+"Power4.ease",
 scale:1,
 
 })

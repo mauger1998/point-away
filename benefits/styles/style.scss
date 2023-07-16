@@ -41,3 +41,17 @@ main {
        
     }
 }
+body {
+    background-color:variables.$white;
+    & > img {
+        border:2px solid red;
+        position:absolute;
+        mix-blend-mode:multiply;
+        opacity:0.05;
+        // height:100%;
+        width:100%;
+        object-fit:cover;
+        pointer-events:none;
+
+    }
+}

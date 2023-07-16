@@ -6,6 +6,9 @@
 @use "../../styles/dropdown";
 @use "../../styles/main";
 @use "./services";
+@use "../../styles/overlap-grid";
+@use "../../styles/heritage"; 
+@use "../../styles/animations"; 
 @use "./whats-the-point";
 @use "./cta";
 @use "../../styles/footer";
@@ -33,5 +36,18 @@ main {
             }
         }
        
+    }
+}
+
+body {
+    background-color:variables.$white;
+    & > img {
+        position:absolute;
+        mix-blend-mode:multiply;
+        opacity:0.05;
+        // height:100%;
+        width:100%;
+        object-fit:cover;
+        pointer-events:none;
     }
 }

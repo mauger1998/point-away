@@ -4,7 +4,7 @@
 
 h1 {
     font-size:variables.$h1;
-    color:white;
+    color:variables.$black;
     line-height: variables.$h1;
     text-align:center;
     font-family: baron;
@@ -19,7 +19,7 @@ h1 {
     .word,
     .line {
         font-size:variables.$h1;
-        color:white;
+        color:variables.$black;;
         line-height: variables.$h1;
         text-align:center;
         font-family: baron;
@@ -28,7 +28,7 @@ h1 {
 
 h2 {
     font-size:variables.$h2;
-    color:white;
+    color:variables.$black;;
     line-height: variables.$h2;
     text-align:center;
     font-family: baron;
@@ -59,7 +59,7 @@ h2 {
 
 h3 {
     font-size:variables.$h3;
-    color:white;
+    color:variables.$black;;
     line-height: variables.$h3;
     text-align:center;
     font-family: baron;
@@ -76,7 +76,7 @@ h3 {
 
 p {
     font-size:variables.$base-font;
-    color:white;
+    color:variables.$black;;
     line-height: variables.$base-font * 1.6;
     text-align:center;
 
@@ -86,11 +86,19 @@ p {
         text-align:center;
         font-family: baron;
     }
+    &.h0 {
+        font-size:300px;
+        font-family:baron;
+        font-weight:900;
+        opacity:3%;
+        position:absolute;
+        bottom:0%;
+    }
     .char,
     .word,
     .line {
         font-size:variables.$base-font;
-        color:white;
+        color:variables.$black;;
         line-height: variables.$base-font * 1.4;
         text-align:center;
     }

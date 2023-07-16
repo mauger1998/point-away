@@ -7,6 +7,7 @@
 @use "./main";
 @use "./video";
 @use "./three-card-grid";
+@use "./luke";
 @use "./overlap-grid";
 @use "./two-columns";
 @use "./restoration";
@@ -19,4 +20,18 @@
 
 section {
     overflow:hidden !important;
+}
+
+body {
+    background-color:variables.$white;
+    & > img {
+        position:absolute;
+        mix-blend-mode:multiply;
+        opacity:0.05;
+        height:100%;
+        width:100%;
+        object-fit:cover;
+        pointer-events:none;
+
+    }
 }

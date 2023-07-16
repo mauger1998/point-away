@@ -35,12 +35,13 @@
             width:100%;
 
             .two-card {
-                background-color:variables.$light-black;
+                background-color:variables.$white;
                 padding-inline-start:1rem;
                 display:grid;
                 grid-template-columns: 2fr 1fr;
                 align-items: center;
                 width:100% !important;
+                position:relative;
 
 
                 .card-left {

@@ -18,7 +18,7 @@
 
 body {
   background-color: #030303;
-  color: white;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -31,7 +31,7 @@ img.icon {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #030303 !important;
 }
 
 ul {
@@ -85,13 +85,13 @@ body {
 
 h1 {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
 }
 h1 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -99,7 +99,7 @@ h1 .char,
 h1 .word,
 h1 .line {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
@@ -107,13 +107,13 @@ h1 .line {
 
 h2 {
   font-size: 48px;
-  color: white;
+  color: #030303;
   line-height: 48px;
   text-align: center;
   font-family: baron;
 }
 h2 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -125,20 +125,20 @@ h2.h2 {
 
 h3 {
   font-size: 32px;
-  color: white;
+  color: #030303;
   line-height: 32px;
   text-align: center;
   font-family: baron;
 }
 h3 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
 
 p {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 25.6px;
   text-align: center;
 }
@@ -148,11 +148,19 @@ p.tagline {
   text-align: center;
   font-family: baron;
 }
+p.h0 {
+  font-size: 300px;
+  font-family: baron;
+  font-weight: 900;
+  opacity: 3%;
+  position: absolute;
+  bottom: 0%;
+}
 p .char,
 p .word,
 p .line {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 22.4px;
   text-align: center;
 }
@@ -245,14 +253,14 @@ button .slider .slide {
   transition: transform 200ms ease-out;
 }
 button.primary-button {
-  color: white;
-  background-color: #E2090B;
-  border: 2px solid #E2090B;
+  color: #ffffff;
+  background-color: #31871D;
+  border: 2px solid #31871D;
 }
 button.secondary-button {
-  color: white;
+  color: #31871D;
   background-color: transparent;
-  border: 2px solid #E2090B;
+  border: 2px solid #31871D;
 }
 button span {
   display: flex;
@@ -264,14 +272,14 @@ button span:nth-child(2) {
 }
 @media (max-width: 500px) {
   button.primary-button {
-    color: white;
-    background-color: #E2090B;
-    border: 2px solid #E2090B;
+    color: #ffffff;
+    background-color: #31871D;
+    border: 2px solid #31871D;
   }
   button.secondary-button {
-    color: white;
+    color: #ffffff;
     background-color: transparent;
-    border: 2px solid #E2090B;
+    border: 2px solid #31871D;
     padding: 1rem;
   }
 }
@@ -292,6 +300,9 @@ header .header-wrapper ul {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+header .header-wrapper ul li {
+  color: #030303;
 }
 header .header-wrapper .nav-button-container {
   display: flex;
@@ -473,7 +484,7 @@ main .background-rocks {
 }
 
 .custom-services-section {
-  background-color: white;
+  background-color: #ffffff;
   position: relative;
   z-index: 0;
 }
@@ -546,6 +557,152 @@ main .background-rocks {
   }
 }
 
+.overlap-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.overlap-card-grid .card-grid-item {
+  position: relative;
+}
+.overlap-card-grid .card-grid-item:nth-child(1) {
+  margin-right: -4rem;
+  transform: translateX(2rem);
+}
+.overlap-card-grid .card-grid-item:nth-child(1)::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0) 25%);
+}
+.overlap-card-grid .card-grid-item:nth-child(2) {
+  margin-left: -4rem;
+}
+.overlap-card-grid .card-grid-item:nth-child(2)::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  background-image: linear-gradient(to top, #030303, rgba(3, 3, 3, 0) 25%);
+}
+.overlap-card-grid .card-grid-item img {
+  position: relative;
+  width: 100%;
+}
+.overlap-card-grid .card-grid-item h3 {
+  position: absolute;
+  color: #ffffff;
+  bottom: 1rem;
+  left: 2rem;
+  z-index: 1001;
+  max-width: 16ch;
+  text-align: left;
+}
+.overlap-card-grid .no-gradient::after {
+  background-image: none !important;
+}
+@media (max-width: 700px) {
+  .overlap-card-grid .card-grid-item h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem !important;
+    z-index: 1001;
+    max-width: 16ch;
+    text-align: left;
+  }
+}
+
+.carbon-section .wrapper .restoration-titles {
+  margin-block: 2rem;
+}
+
+.heritage-section {
+  position: relative;
+}
+.heritage-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+.heritage-section .background-rocks {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.heritage-section .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8rem;
+}
+.heritage-section .wrapper .restoration-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.heritage-section .wrapper .restoration-titles h2 {
+  max-width: 20ch;
+  text-align: center;
+}
+.heritage-section .wrapper .restoration-titles p {
+  max-width: 56ch;
+}
+
+main .wrapper .mask .word {
+  overflow: hidden;
+}
+main .wrapper .mask .word .char {
+  transform: translateY(-350%);
+}
+main .wrapper .svg-wrapper {
+  overflow-y: hidden;
+}
+main .wrapper .svg-wrapper > svg {
+  transform: translateY(-10rem);
+}
+main .wrapper a {
+  overflow: hidden;
+}
+main .wrapper a button {
+  transform: translateY(-6rem);
+}
+
+.three-card-grid .grid-item .svg-mask {
+  overflow-y: hidden;
+}
+.heritage .wrapper .restoration-titles h2 .word {
+  overflow-y: hidden;
+}
+
+.overlap-card-grid .card-grid-item:nth-child(1) {
+  transform: translateY(2rem) translateX(6rem);
+}
+.overlap-card-grid .card-grid-item:nth-child(2) {
+  transform: translateX(-6rem);
+}
+@media (max-width: 885px) {
+  .overlap-card-grid .card-grid-item:nth-child(1) {
+    transform: translateY(2rem) translateX(6rem);
+  }
+  .overlap-card-grid .card-grid-item:nth-child(2) {
+    transform: translateX(-6rem);
+  }
+}
 .whats-the-point-section .wrapper {
   display: flex;
   flex-direction: column;
@@ -576,13 +733,14 @@ main .background-rocks {
   width: 100%;
 }
 .whats-the-point-section .wrapper .two-card-grid .two-card {
-  background-color: #151515;
+  background-color: #ffffff;
   -webkit-padding-start: 1rem;
           padding-inline-start: 1rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
   width: 100% !important;
+  position: relative;
 }
 .whats-the-point-section .wrapper .two-card-grid .two-card .card-left {
   display: flex;
@@ -609,7 +767,7 @@ main .background-rocks {
 .whats-the-point-section .wrapper .two-card-grid .two-card .card-left .card-left-top p.tagline {
   -webkit-margin-before: 2rem;
           margin-block-start: 2rem;
-  color: #E2090B;
+  color: #31871D;
 }
 .whats-the-point-section .wrapper .two-card-grid .two-card .card-left button {
   -webkit-margin-after: 2rem;
@@ -707,6 +865,16 @@ main .background-rocks {
 footer {
   position: relative;
 }
+footer > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
 footer .background-rocks {
   position: absolute;
   inset: 0;
@@ -784,10 +952,10 @@ footer .wrapper .footer-top .footer-top-right ul {
   flex: 1 1 0;
 }
 footer .wrapper .footer-bottom {
-  -webkit-border-before: 0.5px solid white;
-          border-block-start: 0.5px solid white;
+  -webkit-border-before: 0.5px solid #ffffff;
+          border-block-start: 0.5px solid #ffffff;
   width: 100%;
-  color: white;
+  color: #ffffff;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -888,11 +1056,24 @@ main {
   max-height: 850px;
 }
 main .wrapper h1 span .char {
-  color: #E2090B !important;
+  color: #31871D !important;
 }
 main .wrapper .word {
   overflow: hidden;
 }
 main .wrapper .word .char {
   transform: translateY(4rem);
+}
+
+body {
+  background-color: #ffffff;
+}
+body > img {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+@use "./variables";
+
+.about-luke-section {
+    background-color:variables.$white;
+    position:relative;
+    & > .noise {
+        position:absolute;
+        mix-blend-mode:multiply;
+        opacity:0.05;
+        height:100%;
+        border:2px  red;
+        width:100%;
+        object-fit:cover;
+        pointer-events:none;
+
+    }
+    .wrapper {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            max-width:25ch;
+        }
+
+        p {
+            max-width:60ch;
+            margin-block-start:2rem;
+        }
+
+        .overlap-card-grid {
+            margin-block-start:8rem;
+        }
+    }
+}

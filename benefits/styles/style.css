@@ -18,7 +18,7 @@
 
 body {
   background-color: #030303;
-  color: white;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -31,7 +31,7 @@ img.icon {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #030303 !important;
 }
 
 ul {
@@ -85,13 +85,13 @@ body {
 
 h1 {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
 }
 h1 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -99,7 +99,7 @@ h1 .char,
 h1 .word,
 h1 .line {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
@@ -107,13 +107,13 @@ h1 .line {
 
 h2 {
   font-size: 48px;
-  color: white;
+  color: #030303;
   line-height: 48px;
   text-align: center;
   font-family: baron;
 }
 h2 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -125,20 +125,20 @@ h2.h2 {
 
 h3 {
   font-size: 32px;
-  color: white;
+  color: #030303;
   line-height: 32px;
   text-align: center;
   font-family: baron;
 }
 h3 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
 
 p {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 25.6px;
   text-align: center;
 }
@@ -148,11 +148,19 @@ p.tagline {
   text-align: center;
   font-family: baron;
 }
+p.h0 {
+  font-size: 300px;
+  font-family: baron;
+  font-weight: 900;
+  opacity: 3%;
+  position: absolute;
+  bottom: 0%;
+}
 p .char,
 p .word,
 p .line {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 22.4px;
   text-align: center;
 }
@@ -245,14 +253,14 @@ button .slider .slide {
   transition: transform 200ms ease-out;
 }
 button.primary-button {
-  color: white;
-  background-color: #E2090B;
-  border: 2px solid #E2090B;
+  color: #ffffff;
+  background-color: #31871D;
+  border: 2px solid #31871D;
 }
 button.secondary-button {
-  color: white;
+  color: #31871D;
   background-color: transparent;
-  border: 2px solid #E2090B;
+  border: 2px solid #31871D;
 }
 button span {
   display: flex;
@@ -264,14 +272,14 @@ button span:nth-child(2) {
 }
 @media (max-width: 500px) {
   button.primary-button {
-    color: white;
-    background-color: #E2090B;
-    border: 2px solid #E2090B;
+    color: #ffffff;
+    background-color: #31871D;
+    border: 2px solid #31871D;
   }
   button.secondary-button {
-    color: white;
+    color: #ffffff;
     background-color: transparent;
-    border: 2px solid #E2090B;
+    border: 2px solid #31871D;
     padding: 1rem;
   }
 }
@@ -292,6 +300,9 @@ header .header-wrapper ul {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+header .header-wrapper ul li {
+  color: #030303;
 }
 header .header-wrapper .nav-button-container {
   display: flex;
@@ -474,6 +485,7 @@ main .background-rocks {
 
 .increased-value-section {
   background-color: white;
+  position: relative;
 }
 .increased-value-section .wrapper {
   display: flex;
@@ -491,8 +503,22 @@ main .background-rocks {
   color: #030303;
 }
 
+.carbon-section .wrapper .restoration-titles {
+  margin-block: 2rem;
+}
+
 .heritage-section {
   position: relative;
+}
+.heritage-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }
 .heritage-section .background-rocks {
   position: absolute;
@@ -539,7 +565,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item:nth-child(1)::after {
   content: "";
-  width: 200%;
+  width: 100%;
   position: absolute;
   inset: 0;
   z-index: 1000;
@@ -550,7 +576,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item:nth-child(2)::after {
   content: "";
-  width: 200%;
+  width: 100%;
   position: absolute;
   inset: 0;
   z-index: 1000;
@@ -562,6 +588,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item h3 {
   position: absolute;
+  color: #ffffff;
   bottom: 1rem;
   left: 2rem;
   z-index: 1001;
@@ -637,6 +664,16 @@ main .wrapper a button {
 
 footer {
   position: relative;
+}
+footer > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }
 footer .background-rocks {
   position: absolute;
@@ -715,10 +752,10 @@ footer .wrapper .footer-top .footer-top-right ul {
   flex: 1 1 0;
 }
 footer .wrapper .footer-bottom {
-  -webkit-border-before: 0.5px solid white;
-          border-block-start: 0.5px solid white;
+  -webkit-border-before: 0.5px solid #ffffff;
+          border-block-start: 0.5px solid #ffffff;
   width: 100%;
-  color: white;
+  color: #ffffff;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -819,7 +856,7 @@ main {
   max-height: 850px;
 }
 main .wrapper h1 span .char {
-  color: #E2090B !important;
+  color: #31871D !important;
 }
 main .wrapper .line {
   width: 100%;
@@ -829,4 +866,18 @@ main .wrapper .word {
 }
 main .wrapper .word .char {
   transform: translateY(4rem);
+}
+
+body {
+  background-color: #ffffff;
+}
+body > img {
+  border: 2px solid red;
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

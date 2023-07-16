@@ -22,7 +22,7 @@
 
 body {
     background-color: variables.$black;
-    color:white;
+    color:variables.$white;
     overflow-x:hidden;
 }
 
@@ -37,7 +37,7 @@ img {
 
 a {
     text-decoration: none;
-    color:white;
+    color:variables.$black !important;
 }
 
 ul {

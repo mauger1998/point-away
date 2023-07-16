@@ -18,7 +18,7 @@
 
 body {
   background-color: #030303;
-  color: white;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -31,7 +31,7 @@ img.icon {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #030303 !important;
 }
 
 ul {
@@ -85,13 +85,13 @@ body {
 
 h1 {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
 }
 h1 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -99,7 +99,7 @@ h1 .char,
 h1 .word,
 h1 .line {
   font-size: 60px;
-  color: white;
+  color: #030303;
   line-height: 60px;
   text-align: center;
   font-family: baron;
@@ -107,13 +107,13 @@ h1 .line {
 
 h2 {
   font-size: 48px;
-  color: white;
+  color: #030303;
   line-height: 48px;
   text-align: center;
   font-family: baron;
 }
 h2 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
@@ -125,20 +125,20 @@ h2.h2 {
 
 h3 {
   font-size: 32px;
-  color: white;
+  color: #030303;
   line-height: 32px;
   text-align: center;
   font-family: baron;
 }
 h3 span {
-  color: #E2090B;
+  color: #31871D;
   text-align: center;
   font-family: baron;
 }
 
 p {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 25.6px;
   text-align: center;
 }
@@ -148,11 +148,19 @@ p.tagline {
   text-align: center;
   font-family: baron;
 }
+p.h0 {
+  font-size: 300px;
+  font-family: baron;
+  font-weight: 900;
+  opacity: 3%;
+  position: absolute;
+  bottom: 0%;
+}
 p .char,
 p .word,
 p .line {
   font-size: 16px;
-  color: white;
+  color: #030303;
   line-height: 22.4px;
   text-align: center;
 }
@@ -245,14 +253,14 @@ button .slider .slide {
   transition: transform 200ms ease-out;
 }
 button.primary-button {
-  color: white;
-  background-color: #E2090B;
-  border: 2px solid #E2090B;
+  color: #ffffff;
+  background-color: #31871D;
+  border: 2px solid #31871D;
 }
 button.secondary-button {
-  color: white;
+  color: #31871D;
   background-color: transparent;
-  border: 2px solid #E2090B;
+  border: 2px solid #31871D;
 }
 button span {
   display: flex;
@@ -264,14 +272,14 @@ button span:nth-child(2) {
 }
 @media (max-width: 500px) {
   button.primary-button {
-    color: white;
-    background-color: #E2090B;
-    border: 2px solid #E2090B;
+    color: #ffffff;
+    background-color: #31871D;
+    border: 2px solid #31871D;
   }
   button.secondary-button {
-    color: white;
+    color: #ffffff;
     background-color: transparent;
-    border: 2px solid #E2090B;
+    border: 2px solid #31871D;
     padding: 1rem;
   }
 }
@@ -292,6 +300,9 @@ header .header-wrapper ul {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+header .header-wrapper ul li {
+  color: #030303;
 }
 header .header-wrapper .nav-button-container {
   display: flex;
@@ -479,8 +490,8 @@ main .background-rocks {
   margin-top: -12rem;
 }
 .video-section .wrapper video {
-  background-color: white;
-  border: 2px solid white;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
   width: 100%;
   height: 100vh;
   max-height: 800px;
@@ -493,7 +504,7 @@ main .background-rocks {
 
 .three-card-grid-section {
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
 }
 .three-card-grid-section .background-rocks {
   position: absolute;
@@ -594,6 +605,40 @@ main .background-rocks {
   }
 }
 
+.about-luke-section {
+  background-color: #ffffff;
+  position: relative;
+}
+.about-luke-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  border: 2px red;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+.about-luke-section .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-luke-section .wrapper h2 {
+  max-width: 25ch;
+}
+.about-luke-section .wrapper p {
+  max-width: 60ch;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+.about-luke-section .wrapper .overlap-card-grid {
+  -webkit-margin-before: 8rem;
+          margin-block-start: 8rem;
+}
+
 .overlap-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -607,7 +652,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item:nth-child(1)::after {
   content: "";
-  width: 200%;
+  width: 100%;
   position: absolute;
   inset: 0;
   z-index: 1000;
@@ -618,7 +663,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item:nth-child(2)::after {
   content: "";
-  width: 200%;
+  width: 100%;
   position: absolute;
   inset: 0;
   z-index: 1000;
@@ -630,6 +675,7 @@ main .background-rocks {
 }
 .overlap-card-grid .card-grid-item h3 {
   position: absolute;
+  color: #ffffff;
   bottom: 1rem;
   left: 2rem;
   z-index: 1001;
@@ -651,7 +697,8 @@ main .background-rocks {
 }
 
 .two-columns-section {
-  background-color: #151515;
+  background-color: #ffffff;
+  position: relative;
 }
 .two-columns-section .wrapper {
   display: grid;
@@ -668,13 +715,17 @@ main .background-rocks {
   padding-right: 2rem;
 }
 .two-columns-section .wrapper .column:nth-child(2) {
-  border-left: 0.5px solid white;
+  border-left: 0.5px solid #030303;
   padding-left: 2rem;
+}
+.two-columns-section .wrapper .column h2 {
+  color: #030303;
 }
 .two-columns-section .wrapper .column p {
   margin-block: 1rem 2rem;
   max-width: 48ch;
   text-wrap: balance;
+  color: #030303;
 }
 @media (max-width: 855px) {
   .two-columns-section .wrapper {
@@ -698,8 +749,22 @@ main .background-rocks {
   }
 }
 
+.carbon-section .wrapper .restoration-titles {
+  margin-block: 2rem;
+}
+
 .heritage-section {
   position: relative;
+}
+.heritage-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }
 .heritage-section .background-rocks {
   position: absolute;
@@ -736,6 +801,16 @@ main .background-rocks {
 .restoration-section {
   position: relative;
 }
+.restoration-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
 .restoration-section .background-rocks {
   position: absolute;
   height: 100%;
@@ -770,7 +845,17 @@ main .background-rocks {
 
 .seafront-sunday-section {
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
+}
+.seafront-sunday-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }
 .seafront-sunday-section .background-rocks {
   position: absolute;
@@ -812,6 +897,16 @@ main .background-rocks {
 .contact-section {
   position: relative;
 }
+.contact-section > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
 .contact-section .background-rocks-long {
   position: absolute !important;
   inset: 0;
@@ -847,14 +942,16 @@ main .background-rocks {
 .contact-section .wrapper form fieldset label {
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
+  color: #030303;
 }
 .contact-section .wrapper form fieldset input,
 .contact-section .wrapper form fieldset textarea {
   width: 100%;
   padding: 0.5rem;
-  background: #151515;
+  background: #ffffff;
   border: none;
   border-radius: 0.25rem;
+  z-index: 10;
 }
 .contact-section .wrapper form button {
   -webkit-margin-before: 2rem;
@@ -879,6 +976,16 @@ main .background-rocks {
 
 footer {
   position: relative;
+}
+footer > .noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }
 footer .background-rocks {
   position: absolute;
@@ -957,10 +1064,10 @@ footer .wrapper .footer-top .footer-top-right ul {
   flex: 1 1 0;
 }
 footer .wrapper .footer-bottom {
-  -webkit-border-before: 0.5px solid white;
-          border-block-start: 0.5px solid white;
+  -webkit-border-before: 0.5px solid #ffffff;
+          border-block-start: 0.5px solid #ffffff;
   width: 100%;
-  color: white;
+  color: #ffffff;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -1084,7 +1191,7 @@ footer .wrapper .footer-bottom a svg {
 .contact-information-section .wrapper .contact-grid-item a {
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
-  color: white;
+  color: #ffffff;
   font-size: 14px !important;
   text-align: center;
 }
@@ -1156,4 +1263,18 @@ main .wrapper a button {
 }
 section {
   overflow: hidden !important;
+}
+
+body {
+  background-color: #ffffff;
+}
+body > img {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
