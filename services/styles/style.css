@@ -1107,7 +1107,7 @@ footer .wrapper .footer-bottom a svg {
 }
 
 main {
-  height: 100vh;
+  height: 100svh;
   max-height: 1000px;
 }
 main .wrapper h1 span .char {
