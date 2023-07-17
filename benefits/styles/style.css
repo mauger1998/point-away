@@ -519,6 +519,7 @@ main .background-rocks {
 }
 .increased-value-section .wrapper h2 {
   color: #030303;
+  max-width: 18ch;
 }
 
 .carbon-section .wrapper .restoration-titles {
@@ -714,6 +715,9 @@ main .wrapper a button {
   align-items: center;
   justify-content: center;
   padding-block: 16rem;
+}
+.cta-section .wrapper h2 {
+  max-width: 20ch;
 }
 .cta-section .wrapper p {
   max-width: 50ch;

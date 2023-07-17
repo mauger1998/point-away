@@ -25,6 +25,10 @@
         justify-content: center;
         padding-block:16rem;
 
+        h2 {
+            max-width:20ch;
+        }
+
         p {
             max-width:50ch;
             text-wrap:balance;

@@ -890,6 +890,9 @@ main .wrapper a button {
   justify-content: center;
   padding-block: 16rem;
 }
+.cta-section .wrapper h2 {
+  max-width: 20ch;
+}
 .cta-section .wrapper p {
   max-width: 50ch;
   text-wrap: balance;
