@@ -22,8 +22,14 @@ section {
     overflow:hidden !important;
 }
 
+main {
+    height:100vh;
+    max-height:1000px !important;
+}
+
 body {
     background-color:variables.$white;
+    position:relative;
     & > img {
         position:absolute;
         mix-blend-mode:multiply;
@@ -34,4 +40,17 @@ body {
         pointer-events:none;
 
     }
+}
+
+.noise {
+    position:absolute;
+    mix-blend-mode:multiply;
+    opacity:0.05;
+    height:100%;
+    border:2px  red;
+    width:100%;
+    object-fit:cover;
+    pointer-events:none;
+    z-index:-1;
+
 }

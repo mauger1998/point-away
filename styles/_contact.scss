@@ -5,23 +5,16 @@
 
 .contact-section {
     position:relative;
-    & > .noise {
+  
+    .background-rocks {
         position:absolute;
-        mix-blend-mode:multiply;
-        opacity:0.05;
         height:100%;
-        width:100%;
-        object-fit:cover;
-        pointer-events:none;
-
-    }
-    .background-rocks-long {
-        position:absolute !important;
-        inset:0;
-        opacity:0.2;
+        width:auto;
+        right:0;
         z-index:-1;
-        // width:100%;
-        // object-fit:cover;
+        opacity:0.2;
+        overflow:hidden !important;
+
     }
     .wrapper {
         display:flex;

@@ -87,12 +87,17 @@ p {
         font-family: baron;
     }
     &.h0 {
-        font-size:300px;
+        font-size:clamp(150px, 18vw, 300px)  !important;
         font-family:baron;
         font-weight:900;
         opacity:3%;
         position:absolute;
         bottom:0%;
+
+        @media(max-width:700px) {
+            font-size:clamp(75px, 18vw, 150px)  !important;
+
+        }
     }
     .char,
     .word,
@@ -126,9 +131,7 @@ h1 {
             max-width:16ch;
             font-size:clamp(variables.$mobile-h2 * 0.75, 3.5vw, variables.$mobile-h2) !important;
             // font-size:3vw !important;
-            line-height:clamp(variables.$mobile-h2 * 0.75 * 1.2, 3.5vw * 1.2, variables.$mobile-h2 * 1.2) !important;
-
-            
+            line-height:clamp(variables.$mobile-h2 * 0.75 * 1.2, 3.5vw * 1.2, variables.$mobile-h2 * 1.2) !important;     
     }
            
     }

@@ -5,6 +5,19 @@
 
 
 .cta-section {
+    position:relative;
+    background-color:white;
+
+    .background-rocks {
+        position:absolute;
+        height:100%;
+        width:auto;
+        right:0;
+        z-index:-1;
+        opacity:0.2;
+        overflow:hidden !important;
+
+    }
     .wrapper {
         display:flex;
         flex-direction: column;

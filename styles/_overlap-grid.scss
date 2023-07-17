@@ -6,7 +6,18 @@
 .overlap-card-grid {
     display:grid;
     grid-template-columns: 1fr 1fr;
+    position:relative;
 
+    .background-rocks {
+        position:absolute;
+        height:100%;
+        width:auto;
+        right:0;
+        z-index:-1;
+        opacity:0.2;
+        overflow:hidden !important;
+
+    }
     
 
    

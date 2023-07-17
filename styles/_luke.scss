@@ -3,17 +3,7 @@
 .about-luke-section {
     background-color:variables.$white;
     position:relative;
-    & > .noise {
-        position:absolute;
-        mix-blend-mode:multiply;
-        opacity:0.05;
-        height:100%;
-        border:2px  red;
-        width:100%;
-        object-fit:cover;
-        pointer-events:none;
-
-    }
+   
     .wrapper {
         display:flex;
         align-items: center;

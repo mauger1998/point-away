@@ -4,16 +4,23 @@
 @use "./button";
 
 
+
+
 .video-section {
     overflow:hidden !important;
 
+
+    
+
+
     .wrapper {
-        margin-top:-12rem;
+        margin-top:-16.5rem;
    
 
         video {
             // background-color:variables.$white;
             border:2px solid variables.$white;
+
             width:100%;
             height:100vh;
             max-height:800px;

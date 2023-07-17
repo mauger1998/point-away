@@ -119,8 +119,8 @@ h2 span {
 }
 h2.h2 {
   max-width: 16ch;
-  font-size: clamp(40px, 3.5vw, 48px) !important;
-  line-height: clamp(48px, 4.2vw, 57.6px) !important;
+  font-size: clamp(32px, 3.5vw, 48px) !important;
+  line-height: clamp(38.4px, 4.2vw, 57.6px) !important;
 }
 
 h3 {
@@ -149,12 +149,17 @@ p.tagline {
   font-family: baron;
 }
 p.h0 {
-  font-size: 300px;
+  font-size: clamp(150px, 18vw, 300px) !important;
   font-family: baron;
   font-weight: 900;
   opacity: 3%;
   position: absolute;
   bottom: 0%;
+}
+@media (max-width: 700px) {
+  p.h0 {
+    font-size: clamp(75px, 18vw, 150px) !important;
+  }
 }
 p .char,
 p .word,
@@ -178,14 +183,14 @@ h1 .word .char {
 @media (max-width: 1024px) {
   h2.h2 {
     max-width: 16ch;
-    font-size: clamp(30px, 3.5vw, 40px) !important;
-    line-height: clamp(36px, 4.2vw, 48px) !important;
+    font-size: clamp(24px, 3.5vw, 32px) !important;
+    line-height: clamp(28.8px, 4.2vw, 38.4px) !important;
   }
 }
 @media (max-width: 855px) {
   h2.h2 {
-    font-size: 40px !important;
-    line-height: 48px !important;
+    font-size: 32px !important;
+    line-height: 38.4px !important;
   }
 }
 @media (max-width: 700px) {
@@ -210,8 +215,8 @@ h1 .word .char {
     line-height: clamp(33.6px, 10vw, 48px);
   }
   .wrapper h2 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 38.4px;
   }
   .wrapper h3 {
     font-size: 20px;
@@ -220,8 +225,8 @@ h1 .word .char {
 }
 @media (max-width: 700px) and (max-width: 468px) {
   h2.h2 {
-    font-size: clamp(28px, 8.25vw, 40px) !important;
-    line-height: clamp(36px, 4.2vw, 48px) !important;
+    font-size: clamp(22.4px, 8.25vw, 32px) !important;
+    line-height: clamp(28.8px, 4.2vw, 38.4px) !important;
   }
 }
 button {
@@ -353,7 +358,7 @@ header .header-wrapper .menu {
   right: 0;
   top: calc(100% + 0.5rem);
   padding: 1.5rem;
-  background-color: #262626;
+  background-color: white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -442,6 +447,8 @@ header .header-wrapper .menu {
 }
 main {
   overflow: hidden !important;
+  max-height: 1000px !important;
+  position: relative;
 }
 main .wrapper {
   display: flex;
@@ -453,6 +460,7 @@ main .wrapper {
   -webkit-padding-after: 14rem;
           padding-block-end: 14rem;
   overflow: hidden !important;
+  position: relative;
 }
 main .wrapper > .svg-wrapper svg {
   width: 28rem;
@@ -469,17 +477,18 @@ main .wrapper p {
 }
 main .background-rocks {
   position: absolute;
-  width: 50%;
+  height: 100%;
+  width: auto;
   right: 0;
   z-index: -1;
   opacity: 0.2;
   overflow: hidden !important;
 }
 @media (max-width: 500px) {
-  main .wrapper > svg {
-    width: 32rem;
-    width: 100%;
-    width: max(18rem, 75vw);
+  main .wrapper .svg-wrapper svg {
+    width: 28rem;
+    width: max(16rem, 80vw);
+    max-width: 650px;
   }
 }
 
@@ -487,10 +496,9 @@ main .background-rocks {
   overflow: hidden !important;
 }
 .video-section .wrapper {
-  margin-top: -12rem;
+  margin-top: -16.5rem;
 }
 .video-section .wrapper video {
-  background-color: #ffffff;
   border: 2px solid #ffffff;
   width: 100%;
   height: 100vh;
@@ -508,11 +516,12 @@ main .background-rocks {
 }
 .three-card-grid-section .background-rocks {
   position: absolute;
-  width: 100%;
   height: 100%;
-  inset: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: auto;
+  right: 0;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden !important;
 }
 .three-card-grid-section .three-card-grid {
   display: grid;
@@ -609,17 +618,6 @@ main .background-rocks {
   background-color: #ffffff;
   position: relative;
 }
-.about-luke-section > .noise {
-  position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
-  height: 100%;
-  border: 2px red;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
-}
 .about-luke-section .wrapper {
   display: flex;
   align-items: center;
@@ -642,6 +640,16 @@ main .background-rocks {
 .overlap-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+.overlap-card-grid .background-rocks {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  right: 0;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden !important;
 }
 .overlap-card-grid .card-grid-item {
   position: relative;
@@ -756,25 +764,14 @@ main .background-rocks {
 .heritage-section {
   position: relative;
 }
-.heritage-section > .noise {
-  position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
-}
 .heritage-section .background-rocks {
   position: absolute;
   height: 100%;
-  width: 100%;
-  inset: 0;
+  width: auto;
+  right: 0;
   z-index: -1;
   opacity: 0.2;
-  -o-object-fit: cover;
-     object-fit: cover;
+  overflow: hidden !important;
 }
 .heritage-section .wrapper {
   display: flex;
@@ -801,25 +798,14 @@ main .background-rocks {
 .restoration-section {
   position: relative;
 }
-.restoration-section > .noise {
-  position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
-}
 .restoration-section .background-rocks {
   position: absolute;
   height: 100%;
-  width: 100%;
-  inset: 0;
+  width: auto;
+  right: 0;
   z-index: -1;
   opacity: 0.2;
-  -o-object-fit: cover;
-     object-fit: cover;
+  overflow: hidden !important;
 }
 .restoration-section .wrapper {
   display: flex;
@@ -850,12 +836,11 @@ main .background-rocks {
 .seafront-sunday-section .background-rocks {
   position: absolute;
   height: 100%;
-  width: 100%;
-  inset: 0;
-  z-index: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
+  width: auto;
+  right: 0;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden !important;
 }
 .seafront-sunday-section .wrapper {
   display: flex;
@@ -887,21 +872,14 @@ main .background-rocks {
 .contact-section {
   position: relative;
 }
-.contact-section > .noise {
+.contact-section .background-rocks {
   position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
   height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
-}
-.contact-section .background-rocks-long {
-  position: absolute !important;
-  inset: 0;
-  opacity: 0.2;
+  width: auto;
+  right: 0;
   z-index: -1;
+  opacity: 0.2;
+  overflow: hidden !important;
 }
 .contact-section .wrapper {
   display: flex;
@@ -967,24 +945,14 @@ main .background-rocks {
 footer {
   position: relative;
 }
-footer > .noise {
-  position: absolute;
-  mix-blend-mode: multiply;
-  opacity: 0.05;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  pointer-events: none;
-}
 footer .background-rocks {
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  width: auto;
+  right: 0;
+  z-index: -1;
+  opacity: 0.2;
+  overflow: hidden !important;
 }
 footer p {
   font-size: 14px;
@@ -1053,9 +1021,12 @@ footer .wrapper .footer-top .footer-top-right ul {
   gap: 1rem;
   flex: 1 1 0;
 }
+footer .wrapper .footer-top .footer-top-right ul li {
+  color: #030303;
+}
 footer .wrapper .footer-bottom {
-  -webkit-border-before: 0.5px solid #ffffff;
-          border-block-start: 0.5px solid #ffffff;
+  -webkit-border-before: 0.5px solid #030303;
+          border-block-start: 0.5px solid #030303;
   width: 100%;
   color: #ffffff;
   display: flex;
@@ -1255,8 +1226,14 @@ section {
   overflow: hidden !important;
 }
 
+main {
+  height: 100vh;
+  max-height: 1000px !important;
+}
+
 body {
   background-color: #ffffff;
+  position: relative;
 }
 body > img {
   position: absolute;
@@ -1267,4 +1244,17 @@ body > img {
   -o-object-fit: cover;
      object-fit: cover;
   pointer-events: none;
+}
+
+.noise {
+  position: absolute;
+  mix-blend-mode: multiply;
+  opacity: 0.05;
+  height: 100%;
+  border: 2px red;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
 }/*# sourceMappingURL=style.css.map */
