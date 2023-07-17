@@ -301,6 +301,28 @@ header .header-wrapper {
   align-items: center;
   justify-content: space-between;
 }
+header .header-wrapper .header-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+header .header-wrapper > .svg-colour {
+  width: 150px;
+}
+@media (max-width: 1024px) {
+  header .header-wrapper > .svg-colour {
+    display: none;
+  }
+}
+header .header-wrapper > .svg-black {
+  display: none;
+  width: 150px;
+}
+@media (max-width: 1024px) {
+  header .header-wrapper > .svg-black {
+    display: block;
+  }
+}
 header .header-wrapper ul {
   display: flex;
   align-items: center;
@@ -333,7 +355,7 @@ header .header-wrapper .menu {
     display: block !important;
   }
   header .header-wrapper {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 }
 @media (max-width: 700px) {
@@ -461,6 +483,9 @@ main .wrapper {
           padding-block-end: 14rem;
   overflow: hidden !important;
   position: relative;
+}
+main .wrapper h1 {
+  max-width: 40ch;
 }
 main .wrapper > .svg-wrapper svg {
   width: 28rem;

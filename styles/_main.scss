@@ -22,6 +22,10 @@ main {
         overflow:hidden !important;
         position:relative;
 
+        h1 {
+            max-width:40ch;
+        }
+
         & > .svg-wrapper {
             svg {
                 width:28rem;

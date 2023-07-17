@@ -16,6 +16,30 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        .header-left {
+            display:flex;
+            align-items: center;
+            gap:2rem;
+        }
+
+        & > .svg-colour {
+            width:150px;
+            @media (max-width:1024px) {
+                display:none;
+            }
+        }
+        & > .svg-black {
+            display:none;
+            width:150px;
+
+            @media (max-width:1024px) {
+                display:block;
+            }
+
+        }
+
+      
+
         ul {
             display:flex;
             align-items: center;
@@ -57,7 +81,7 @@ header {
         }
         & {
             .header-wrapper {
-                justify-content: flex-end;
+                justify-content: space-between;
             }
         }
         
