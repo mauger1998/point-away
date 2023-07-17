@@ -499,7 +499,9 @@ main .background-rocks {
   margin-top: -16.5rem;
 }
 .video-section .wrapper video {
+  background-color: #ffffff;
   border: 2px solid #ffffff;
+  position: relative;
   width: 100%;
   height: 100vh;
   max-height: 800px;
