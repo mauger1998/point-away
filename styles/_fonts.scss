@@ -5,12 +5,12 @@
 h1 {
     font-size:variables.$h1;
     color:variables.$black;
-    line-height: variables.$h1;
+    line-height: 1.2;
     text-align:center;
     font-family: baron;
 
     span {
-        color:variables.$red;
+        color:1.2;
         text-align:center;
         font-family: baron;
     }
@@ -20,7 +20,7 @@ h1 {
     .line {
         font-size:variables.$h1;
         color:variables.$black;;
-        line-height: variables.$h1;
+        line-height: 1.2;
         text-align:center;
         font-family: baron;
     }
@@ -79,12 +79,15 @@ p {
     color:variables.$black;;
     line-height: variables.$base-font * 1.6;
     text-align:center;
+    font-weight:300;
+    font-family:Arial !important;
+
 
     &.tagline {
         font-size:variables.$tagline-font;
         line-height: variables.$tagline-font * 1.6;
         text-align:center;
-        font-family: baron;
+        font-family: baron !important;
     }
     &.h0 {
         font-size:clamp(150px, 18vw, 300px)  !important;

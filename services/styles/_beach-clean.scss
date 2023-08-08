@@ -1,0 +1,85 @@
+@use "../../styles/variables";
+
+.beach-clean-section {
+    background-image:url(../../public/images/guernsey-map.png);
+    background-size:cover;
+    .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+
+        .beach-clean-grid-item {
+            display:grid;
+            place-content:center;
+            height:100% !important;
+           
+            h2 {
+                text-align:left;
+                
+            }
+            p {
+                text-align:left;
+                margin-block-start:2rem;
+            }
+            &:nth-child(2) {
+                grid-row:span 2;
+                place-content:stretch;
+
+               
+            }
+            &:nth-child(3) {
+                place-content:end;
+  
+            }
+            img {
+                height:inherit !important;
+                object-fit:cover !important;
+            }
+        }
+    }
+    @media (max-width:850px) {
+        .wrapper {
+            grid-template-columns: 1fr;
+            gap:2rem;
+
+            .beach-clean-grid-item {
+                display:grid;
+                place-content:center;
+                height:auto;
+               
+                h2 {
+                    text-align:left;
+                    
+                }
+                p {
+                    text-align:left;
+                    margin-block-start:2rem;
+                    margin-block-end:4rem;
+                }
+                &:nth-child(2) {
+                    grid-row:auto;
+                    place-content:stretch;
+    
+                   
+                }
+                &:nth-child(3) {
+                    place-content:stretch;
+      
+                }
+                img {
+                    height:auto;
+                    object-fit:auto;
+                }
+            }
+        }
+    }
+    @media (max-width:350px) {
+        .wrapper {
+            .beach-clean-grid-item {
+                p {
+                    margin-block-end:2rem;
+                }
+            }
+        }
+    }
+}

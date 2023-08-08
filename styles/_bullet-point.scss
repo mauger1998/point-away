@@ -1,0 +1,69 @@
+@use "./variables";
+
+.bullet-point-section {
+    background-image:url(../public/images/guernsey-map.png);
+    background-size:cover;
+    background-position:center;
+    .wrapper {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+
+        .bullet-point-left {
+            // width:60%;
+            h2 {
+                text-align:left;
+                max-width:26ch;
+            }
+            p {
+                text-align:left;
+                max-width:60ch;
+                margin-block:1rem 3rem;
+            }
+
+            .small-images {
+                display:flex;
+                align-items: center;
+                gap:1rem;
+                width:auto;
+                max-width:75%;
+            }
+        }
+
+        .bullet-point-right {
+            display:grid;
+            gap:4rem;
+            // width:40%;
+
+            .bullet-point-item {
+                display:flex;
+                align-items: center;
+                gap:1rem;
+
+                h3 {
+                    text-align:left;
+                }
+
+                p {
+                    text-align:left;
+                    max-width:40ch;
+                    margin-block-start:1rem;
+                }
+            }
+        }
+        @media (max-width:1125px) {
+            .bullet-point-right {
+                gap:2rem;
+            }
+        }
+       
+    }
+    @media (max-width:1024px) {
+        .wrapper{
+            flex-direction: column;
+            align-items: flex-start;
+            gap:4rem;
+        }
+    }
+}

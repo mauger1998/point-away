@@ -1,0 +1,81 @@
+@use "./variables";
+
+.testimonials-section {
+    background-image: linear-gradient(#03030350, #03030350), url(../public/images/guernsey-harbour.png);
+    background-size:cover;
+
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10rem;
+        padding-bottom:2rem;
+
+        .testimonials-title {
+            h2 {
+                color:white;
+                text-align:left;
+                max-width:28ch;
+            }
+        }
+        .testimonials-grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:2rem;
+            width:60%;
+            align-self:flex-end;
+           
+
+            .testimonials-card {
+                background-color:rgba(253, 252, 252, 0.15);
+                backdrop-filter:blur(10px);
+                padding:1rem;
+                .profile {
+                    display:flex;
+                    align-items: center;
+                    gap:0.5rem;
+                    p {
+                        color:white;
+                        text-align:left;
+                        font-weight:500;
+                        line-height:1.2 !important;
+
+                    }
+                    img {
+                        width:50px;
+                    }
+                }
+                p {
+                    color:white;
+                    text-align:left;
+                    margin-block:1rem;
+                }
+            }
+        }
+    }
+    @media(max-width:1024px) {
+        .wrapper {
+            .testimonials-grid {
+                width:100%;
+            }
+        }
+    }
+    @media(max-width:700px) {
+        .wrapper {
+            gap:4rem;
+            .testimonials-grid {
+                width:100%;
+                gap:1rem;
+            }
+        }
+    }
+    @media (max-width:384px) {
+        .wrapper {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap:2rem;
+
+            }
+        }
+    }
+}

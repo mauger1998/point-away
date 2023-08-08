@@ -1,0 +1,66 @@
+@use "./variables";
+
+.green-services-section {
+    background-color:variables.$red;
+    background-image:url(../public/images/big-guernsey-flag.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    .wrapper {
+        display:grid;
+        gap:4rem;
+
+        .green-services-title {
+            h2 {
+                text-align:left;
+                max-width:20ch;
+                color:white;
+            }
+        }
+
+        .green-services-grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:2rem;
+
+            @media (max-width:600px) {
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+            }
+            @media (max-width:384px) {
+                grid-template-columns: 1fr 1fr;
+                gap:0.5rem;
+            }
+            @media (max-width:369px) {
+                grid-template-columns: 1fr;
+                gap:2rem;
+            }
+
+
+
+            .green-services-card {
+                padding:2rem;
+                background-color:variables.$light-green;
+
+                @media (max-width:831px) {
+                    padding:1rem;
+                }
+               
+                h3 {
+                    text-align:left;
+                    color:white;
+                    margin-block:0.5rem 1rem;
+                }
+                p {
+                    text-align:left;
+                    color:white;
+                }
+            }
+
+            
+        }
+
+        
+    }
+}

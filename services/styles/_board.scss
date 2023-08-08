@@ -1,0 +1,45 @@
+@use "../../styles/variables";
+
+.boarded-section {
+    .wrapper {
+        .boarded-title {
+            h2 {
+                text-align:left;
+                max-width:28ch;
+                margin-block-end:8rem;
+
+            }
+            h3 {
+                text-align:left;
+                font-family:baron !important;
+                font-weight:400 !important;
+                max-width:40ch;
+                margin-block-end:2rem;
+
+            }
+        }
+        .boarded-grid {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:2rem;
+
+            .boarded-item {
+                h3 {
+                    text-align:left;
+                    margin-block:1rem 1.5rem;
+                }
+                p {
+                    text-align:left;
+                    max-width:32ch;
+                }
+            }
+        }
+    }
+    @media (max-width:600px) {
+        .wrapper {
+            .boarded-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

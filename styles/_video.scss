@@ -7,23 +7,42 @@
 
 
 .video-section {
-    overflow:hidden !important;
     .wrapper {
-        margin-top:-16.5rem;
-   
+        display:grid;
+        gap:4rem;
+        grid-template-columns: 1fr 1fr;
+        @media (max-width:900px) {
+                grid-template-columns: 1fr;
+        }
+
+        .video-title {
+            display:flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap:2rem;
+            h2 {
+                max-width:24ch;
+                text-align:left;
+            }
+            p {
+                max-width:60ch;
+                text-align:left;
+            }
+        }
 
         video {
             background-color:variables.$white;
             border:2px solid variables.$white;
             position:relative;
-
-            width:100%;
-            height:100svh;
-            max-height:800px;
             object-fit:cover;
+            height:100%;
+            width:100%;
             scale:0.5;
             opacity:0;
             overflow:hidden !important;
+
+            
 
         }
     }

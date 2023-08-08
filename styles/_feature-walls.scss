@@ -1,0 +1,46 @@
+@use "./variables";
+
+.feature-walls-section {
+    .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:2rem;
+
+        .feature-walls-grid-item {
+            height:100%;
+
+            img {
+                object-fit:cover;
+                height:100%;
+            }
+            &:first-child {
+                margin-block:auto;
+               h2 {
+                    text-align:left;
+                    max-width:24ch;
+                }
+
+               p {
+                    text-align:left;
+
+                    &.subline {
+                        font-size:variables.$h3;
+                        text-transform:uppercase;
+
+                        margin-block:1rem 2rem;
+                    }
+
+                    max-width:60ch;
+                    margin-block-end:2rem;
+                }
+
+
+            }
+        }
+    }
+    @media (max-width:1024px) {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+}

@@ -24,17 +24,13 @@ header {
 
         & > .svg-colour {
             width:150px;
-            @media (max-width:1024px) {
-                display:none;
-            }
+            
         }
         & > .svg-black {
             display:none;
             width:150px;
 
-            @media (max-width:1024px) {
-                display:block;
-            }
+    
 
         }
 
@@ -63,12 +59,7 @@ header {
     }
 
     @media (max-width:1024px) {
-        & {
-            mix-blend-mode:difference !important;
-        }
-        // .dropdown {
-        //     mix-blend-mode:normal;
-        // }
+       
         nav {
             display:none;
         }

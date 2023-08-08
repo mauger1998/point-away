@@ -3,6 +3,12 @@
 @font-face {
     font-family: baron;
     src: url(../Baron-Neue-Black.ttf);
+    font-weight:700;
+}
+@font-face {
+    font-family: baron;
+    src: url(../Baron-Neue.ttf);
+    font-weight:400;
 }
 @font-face {
     font-family: inter;
@@ -21,7 +27,6 @@
 }
 
 body {
-    background-color: variables.$black;
     color:variables.$white;
     overflow-x:hidden;
 }
@@ -57,17 +62,37 @@ footer {
         width:100%;
         max-width:1440px;
         padding:8rem 4rem;
+
+        &.wrapper-narrow {
+            padding:8rem 12rem;
+        }
+    }
+
+    @media (max-width:1250px) {
+        .wrapper-narrow {
+            padding-inline:8rem !important;
+        }
+    }
+    @media (max-width:1125px) {
+        .wrapper-narrow {
+            padding-inline:6rem !important;
+        }
+    }
+    @media (max-width:1050px) {
+        .wrapper-narrow {
+            padding-inline:4rem !important;
+        }
     }
 
     @media (max-width:700px) {
         .wrapper {
-            padding-inline:2rem;
+            padding-inline:2rem !important;
         }
     }
 
     @media (max-width:500px) {
         .wrapper {
-            padding-inline:1rem;
+            padding-inline:1rem !important;
         }
     }
 

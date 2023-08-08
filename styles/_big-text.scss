@@ -1,0 +1,19 @@
+@use "./variables";
+
+.big-text {
+    .wrapper {
+        padding-block:0;
+
+        h2 {
+            font-size:clamp(4rem, 10vw, 10rem);
+            // font-size:10vw;
+            line-height:1;
+            text-align:left;
+
+            @media (max-width:325px) {
+                font-size:clamp(3rem, 10vw, 4rem);
+
+            }
+        }
+    }
+}

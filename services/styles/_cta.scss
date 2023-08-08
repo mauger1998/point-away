@@ -1,38 +1,17 @@
 @use "../../styles/variables";
-@use "../../styles/reset";
-@use "../../styles/fonts";
-@use "../../styles/button";
-
 
 .cta-section {
-    position:relative;
-    background-color:white;
-
-    .background-rocks {
-        position:absolute;
-        height:100%;
-        width:auto;
-        right:0;
-        z-index:-1;
-        opacity:0.2;
-        overflow:hidden !important;
-
-    }
+    background-image:url(../../public/images/guernsey-flag-cta.png);
+    height:90vh;
+    background-size:cover;
+    background-position:center;
+    max-height:825px;
     .wrapper {
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-block:16rem;
-
+        display:grid;
+        place-items:center;
         h2 {
-            max-width:20ch;
-        }
-
-        p {
-            max-width:50ch;
-            text-wrap:balance;
-            margin-block:1rem 2rem;
+            max-width:24ch;
+            margin-block-end:2rem;
         }
     }
 }

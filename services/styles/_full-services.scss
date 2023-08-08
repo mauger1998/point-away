@@ -1,0 +1,47 @@
+@use "../../styles/variables";
+
+.full-services-section {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .full-services-title {
+            h2 {
+                text-align:left;
+                max-width:20ch;
+                margin-block-end:8rem;
+            }
+        }
+        .full-services-grid {
+            display:grid;
+            grid-template-columns:  1fr 1fr 1fr;
+            gap:2rem;
+
+            .full-services-grid-item {
+                h3 {
+                    text-align:left;
+                    margin-block-start:1rem;
+                    font-weight:400 !important;
+                    font-family:baron;
+                }
+            }
+        }
+    }
+    @media (max-width:600px)  {
+        .wrapper {
+            .full-services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+            }
+        }
+    }
+    @media (max-width:384px)  {
+        .wrapper {
+            .full-services-grid {
+                grid-template-columns: 1fr;
+                gap:2rem;
+            }
+        }
+    }
+}
