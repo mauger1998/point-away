@@ -54,3 +54,46 @@ gsap.to("video", {
 
 
 
+
+
+// CMS
+
+let URL = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22mainImages%22%5D+%7B%0A++++%22imageUrl%22%3A+mainImage.asset-%3Eurl%0A%7D%0A"
+
+  // fetch the content
+  fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const mainImages = document.querySelector(".images-section .wrapper")
+    if (result.length > 0) {
+      mainImages.innerHTML = ""
+      result.forEach((result) => {
+        const mainImage = document.createElement("img")
+        mainImage.src = result.imageUrl
+        mainImages.appendChild(mainImage)
+
+      });
+     
+      
+    }
+  })
+  .catch((err) => console.error(err));
+
+
+let URLTWO = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22ethos%22%5D+"
+
+  // fetch the content
+  fetch(URLTWO)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const ethos = document.querySelector(".green-section .wrapper h2")
+    if (result.length > 0) {
+      
+        ethos.textContent = result[0].ethos
+
+ 
+     
+      
+    }
+  })
+  .catch((err) => console.error(err));
