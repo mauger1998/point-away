@@ -1011,6 +1011,35 @@ main .wrapper p {
   margin-block-end: 2rem;
 }
 
+.header-wrapper {
+  padding-inline: 12rem !important;
+}
+
+@media (max-width: 1250px) {
+  .header-wrapper {
+    padding-inline: 8rem !important;
+  }
+}
+@media (max-width: 1125px) {
+  .header-wrapper {
+    padding-inline: 6rem !important;
+  }
+}
+@media (max-width: 1050px) {
+  .header-wrapper {
+    padding-inline: 4rem !important;
+  }
+}
+@media (max-width: 700px) {
+  .header-wrapper {
+    padding-inline: 2rem !important;
+  }
+}
+@media (max-width: 500px) {
+  .header-wrapper {
+    padding-inline: 1rem !important;
+  }
+}
 section {
   overflow: hidden !important;
 }
