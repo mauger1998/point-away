@@ -13,6 +13,7 @@
 @use "./external";
 @use "./board";
 @use "./cta";
+@use "../../styles/footer";
 
 .header-wrapper {
     padding-inline:12rem !important;

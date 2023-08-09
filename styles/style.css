@@ -1009,6 +1009,51 @@ main .wrapper p {
   margin-block-end: 2rem;
 }
 
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+footer .wrapper .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding-block-end: 4rem;
+}
+footer .wrapper .footer-top ul {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .wrapper .footer-top a svg {
+  width: 200px;
+}
+footer .wrapper .footer-bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding-block-start: 4rem;
+}
+footer .wrapper .footer-bottom a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+footer .wrapper .footer-bottom p {
+  font-size: 14px;
+  line-height: 1;
+}
+
 .header-wrapper {
   padding-inline: 12rem !important;
 }
