@@ -22,17 +22,11 @@ header {
             gap:2rem;
         }
 
-        & > .svg-colour {
-            width:150px;
+        & > a .svg-colour {
+            width:150px !important;
             
         }
-        & > .svg-black {
-            display:none;
-            width:150px;
-
-    
-
-        }
+        
 
       
 

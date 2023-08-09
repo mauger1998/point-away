@@ -339,12 +339,8 @@ header .header-wrapper .header-left {
   align-items: center;
   gap: 2rem;
 }
-header .header-wrapper > .svg-colour {
-  width: 150px;
-}
-header .header-wrapper > .svg-black {
-  display: none;
-  width: 150px;
+header .header-wrapper > a .svg-colour {
+  width: 150px !important;
 }
 header .header-wrapper ul {
   display: flex;

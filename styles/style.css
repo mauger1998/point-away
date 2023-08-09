@@ -339,12 +339,8 @@ header .header-wrapper .header-left {
   align-items: center;
   gap: 2rem;
 }
-header .header-wrapper > .svg-colour {
-  width: 150px;
-}
-header .header-wrapper > .svg-black {
-  display: none;
-  width: 150px;
+header .header-wrapper > a .svg-colour {
+  width: 150px !important;
 }
 header .header-wrapper ul {
   display: flex;
@@ -964,6 +960,7 @@ main .wrapper p {
   background-image: linear-gradient(rgba(3, 3, 3, 0.3882352941), rgba(3, 3, 3, 0.3882352941)), url(../public/images/boards-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .boards-section .wrapper {
   display: flex;
