@@ -35,21 +35,21 @@ gsap.to("video", {
 });
 
 
-const video = document.querySelector("video")
+// const video = document.querySelector("video")
 
-// media query handler function
-function mqHandler(e) {
+// // media query handler function
+// function mqHandler(e) {
  
-  console.log(
-    e.matches ? 'large' : 'not large'
-  );
-  video.setAttribute("poster", "public/images/before-grid-one.png")
-}
+//   console.log(
+//     e.matches ? 'large' : 'not large'
+//   );
+//   video.setAttribute("poster", "public/images/before-grid-one.png")
+// }
 
 
 
-const mqLarge  = window.matchMedia( '(max-width: 1024px)' );
-mqLarge.addEventListener('change', mqHandler);
+// const mqLarge  = window.matchMedia( '(max-width: 1024px)' );
+// mqLarge.addEventListener('change', mqHandler);
 
 
 

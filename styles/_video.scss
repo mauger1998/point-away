@@ -32,17 +32,13 @@
         }
 
         video {
-            background-color:variables.$white;
-            border:2px solid variables.$white;
             position:relative;
             object-fit:cover;
             height:100%;
             width:100%;
             scale:0.5;
             opacity:0;
-            overflow:hidden !important;
-
-            
+            overflow:hidden !important;  
 
         }
     }
