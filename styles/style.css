@@ -323,7 +323,7 @@ button span:nth-child(2) {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
 }
 header .header-wrapper {
@@ -662,6 +662,9 @@ main .wrapper p {
   justify-content: center;
   gap: 1rem;
 }
+.bullet-point-section .wrapper .bullet-point-left {
+  width: 60%;
+}
 .bullet-point-section .wrapper .bullet-point-left h2 {
   text-align: left;
   max-width: 26ch;
@@ -675,8 +678,10 @@ main .wrapper p {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: auto;
   max-width: 75%;
+}
+.bullet-point-section .wrapper .bullet-point-left .small-images img {
+  width: calc(50% - 0.5rem);
 }
 .bullet-point-section .wrapper .bullet-point-right {
   display: grid;
@@ -705,6 +710,28 @@ main .wrapper p {
     flex-direction: column;
     align-items: flex-start;
     gap: 4rem;
+  }
+  .bullet-point-section .wrapper .bullet-point-left {
+    width: 100%;
+  }
+  .bullet-point-section .wrapper .bullet-point-left .small-images img {
+    width: calc(50% - 0.5rem);
+  }
+}
+@media (max-width: 600px) {
+  .bullet-point-section .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+  .bullet-point-section .wrapper .bullet-point-left {
+    width: 100%;
+  }
+  .bullet-point-section .wrapper .bullet-point-left .small-images {
+    max-width: 100%;
+  }
+  .bullet-point-section .wrapper .bullet-point-left .small-images img {
+    width: calc(50% - 0.5rem);
   }
 }
 
@@ -1062,6 +1089,38 @@ footer .wrapper .footer-bottom a {
 footer .wrapper .footer-bottom p {
   font-size: 14px;
   line-height: 1;
+}
+@media (max-width: 600px) {
+  footer .wrapper svg {
+    width: 150px !important;
+  }
+}
+@media (max-width: 500px) {
+  footer .wrapper svg {
+    width: 125px !important;
+  }
+}
+@media (max-width: 445px) {
+  footer .wrapper .footer-top {
+    flex-direction: column;
+  }
+}
+@media (max-width: 349px) {
+  footer .wrapper .footer-top {
+    flex-direction: column;
+  }
+  footer .wrapper .footer-top ul {
+    flex-direction: column;
+  }
+  footer .wrapper .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .wrapper .footer-bottom a {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .header-wrapper {

@@ -323,7 +323,7 @@ button span:nth-child(2) {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
 }
 header .header-wrapper {
@@ -1061,6 +1061,38 @@ footer .wrapper .footer-bottom a {
 footer .wrapper .footer-bottom p {
   font-size: 14px;
   line-height: 1;
+}
+@media (max-width: 600px) {
+  footer .wrapper svg {
+    width: 150px !important;
+  }
+}
+@media (max-width: 500px) {
+  footer .wrapper svg {
+    width: 125px !important;
+  }
+}
+@media (max-width: 445px) {
+  footer .wrapper .footer-top {
+    flex-direction: column;
+  }
+}
+@media (max-width: 349px) {
+  footer .wrapper .footer-top {
+    flex-direction: column;
+  }
+  footer .wrapper .footer-top ul {
+    flex-direction: column;
+  }
+  footer .wrapper .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .wrapper .footer-bottom a {
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .header-wrapper {
