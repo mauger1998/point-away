@@ -13,4 +13,78 @@ document.addEventListener("click", (e) => {
         if (dropdown === currentDropdown) return
         dropdown.classList.remove("active")
     })
+})
+
+
+
+// CMS
+
+let URL = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22servicesPageServices%22+%5D+%7C+order%28order%29+%7B%0A++%22imgUrl%22%3A+serviceImage.asset-%3Eurl%2C%0A++servicesName%2C%0A++order%2C%0A%7D"
+
+  // fetch the content
+  fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const fullServicesGrid = document.querySelector(".full-services-grid")
+    if (result.length > 0) {
+        fullServicesGrid.innerHTML = ""
+
+    result.forEach((result) => {
+
+        const fullServiceGridItem = document.createElement("div")
+        fullServiceGridItem.classList.add("full-services-grid-item")
+        fullServicesGrid.appendChild(fullServiceGridItem)
+        const serviceImage = document.createElement("img")
+        serviceImage.src = result.imgUrl
+        fullServiceGridItem.appendChild(serviceImage)
+
+        const serviceName = document.createElement("h3")
+        serviceName.textContent = result.servicesName
+        fullServiceGridItem.appendChild(serviceName)
+
+      });
+     
+      
+    }
   })
+  .catch((err) => console.error(err));
+
+let URLTWO = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22customDesigns%22+%5D+%7C+order%28order%29+%7B%0A++%22imgUrl%22%3A+image.asset-%3Eurl%2C%0A++title%2C%0A++text%2C%0A%7D"
+
+  // fetch the content
+  fetch(URLTWO)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    const boardedGrid = document.querySelector(".boarded-grid")
+    if (result.length > 0) {
+        boardedGrid.innerHTML = ""
+
+    result.forEach((result) => {
+
+        const boardedGridItem = document.createElement("div")
+        boardedGridItem.classList.add("boarded-item")
+        boardedGrid.appendChild(boardedGridItem)
+
+        const boardedImage = document.createElement("img")
+        boardedImage.src = result.imgUrl
+        boardedGridItem.appendChild(boardedImage)
+
+        const boardedTitle = document.createElement("h3")
+        boardedTitle.textContent = result.title
+
+        boardedGridItem.appendChild(boardedTitle)
+
+        const boardedText = document.createElement("p")
+        boardedText.textContent = result.text
+
+        boardedGridItem.appendChild(boardedText)
+
+
+        
+
+      });
+     
+      
+    }
+  })
+  .catch((err) => console.error(err));

@@ -897,6 +897,10 @@ main .wrapper p {
 }
 .testimonials-section .wrapper .testimonials-grid .testimonials-card .profile img {
   width: 50px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .testimonials-section .wrapper .testimonials-grid .testimonials-card p {
   color: white;
