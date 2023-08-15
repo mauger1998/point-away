@@ -80,23 +80,23 @@ let URL = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?quer
   .catch((err) => console.error(err));
 
 
-let URLTWO = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22ethos%22%5D+"
+// let URLTWO = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22ethos%22%5D+"
 
-  // fetch the content
-  fetch(URLTWO)
-  .then((res) => res.json())
-  .then(({ result }) => {
-    const ethos = document.querySelector(".green-section .wrapper h2")
-    if (result.length > 0) {
+//   // fetch the content
+//   fetch(URLTWO)
+//   .then((res) => res.json())
+//   .then(({ result }) => {
+//     const ethos = document.querySelector(".green-section .wrapper h3")
+//     if (result.length > 0) {
       
-        ethos.textContent = result[0].ethos
+//         ethos.textContent = result[0].ethos
 
  
      
       
-    }
-  })
-  .catch((err) => console.error(err));
+//     }
+//   })
+//   .catch((err) => console.error(err));
 
 
 let URLTHREE = "https://wimgb4h5.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type+%3D%3D+%22testimonials%22%5D+%7B%0A++profileImage%2C%0A++name%2C%0A++review%2C%0A++++%22imgUrl%22%3A+profileImage.asset-%3Eurl%0A%7D"
