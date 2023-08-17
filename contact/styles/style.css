@@ -537,10 +537,12 @@ main .wrapper .main-left form {
   gap: 1rem;
   width: 80%;
 }
-main .wrapper .main-left form h2 {
+main .wrapper .main-left form h1 {
   text-align: left;
   max-width: 20ch;
   margin-block-end: 1rem;
+  font-size: 40px;
+  line-height: 1.2;
 }
 main .wrapper .main-left form .social-links {
   margin-block-end: 2rem;
@@ -609,6 +611,9 @@ main .wrapper .main-right img {
   }
   main .wrapper .main-left {
     width: 100%;
+  }
+  main .wrapper .main-left h1 {
+    font-size: 32px !important;
   }
   main .wrapper .main-right {
     width: 100%;
