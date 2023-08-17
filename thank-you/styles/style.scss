@@ -1,0 +1,22 @@
+@use "../../styles/variables";
+@use "../../styles/reset";
+@use "../../styles/fonts";
+@use "../../styles/button";
+
+main {
+    .wrapper {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-block:12rem;
+
+        h1 {
+            max-width:24ch;
+        }
+        p {
+            margin-block:1rem 2rem;
+            max-width:40ch;
+        }
+    }
+}

@@ -1,0 +1,338 @@
+@font-face {
+  font-family: baron;
+  src: url(../Baron-Neue-Black.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: baron;
+  src: url(../Baron-Neue.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: inter;
+  src: url(../Inter-Regular.ttf);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+  scroll-behavior: auto;
+}
+
+body {
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+img {
+  width: 100%;
+}
+img.icon {
+  width: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #030303 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+section,
+main,
+header,
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .wrapper,
+main .wrapper,
+header .wrapper,
+footer .wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 8rem 4rem;
+}
+section .wrapper.wrapper-narrow,
+main .wrapper.wrapper-narrow,
+header .wrapper.wrapper-narrow,
+footer .wrapper.wrapper-narrow {
+  padding: 8rem 12rem;
+}
+@media (max-width: 1250px) {
+  section .wrapper-narrow,
+  main .wrapper-narrow,
+  header .wrapper-narrow,
+  footer .wrapper-narrow {
+    padding-inline: 8rem !important;
+  }
+}
+@media (max-width: 1125px) {
+  section .wrapper-narrow,
+  main .wrapper-narrow,
+  header .wrapper-narrow,
+  footer .wrapper-narrow {
+    padding-inline: 6rem !important;
+  }
+}
+@media (max-width: 1050px) {
+  section .wrapper-narrow,
+  main .wrapper-narrow,
+  header .wrapper-narrow,
+  footer .wrapper-narrow {
+    padding-inline: 4rem !important;
+  }
+}
+@media (max-width: 700px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 2rem !important;
+  }
+}
+@media (max-width: 500px) {
+  section .wrapper,
+  main .wrapper,
+  header .wrapper,
+  footer .wrapper {
+    padding-inline: 1rem !important;
+  }
+}
+
+.word,
+.line,
+.char {
+  flex-wrap: none !important;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+h1 {
+  font-size: 48px;
+  color: #030303;
+  line-height: 1.2;
+  text-align: center;
+  font-family: baron;
+}
+h1 span {
+  color: 1.2;
+  text-align: center;
+  font-family: baron;
+}
+h1 .char,
+h1 .word,
+h1 .line {
+  font-size: 48px;
+  color: #030303;
+  line-height: 1.2;
+  text-align: center;
+  font-family: baron;
+}
+
+h2 {
+  font-size: 40px;
+  color: #030303;
+  line-height: 40px;
+  text-align: center;
+  font-family: baron;
+}
+h2 span {
+  color: #31871D;
+  text-align: center;
+  font-family: baron;
+}
+h2.h2 {
+  max-width: 16ch;
+  font-size: clamp(32px, 3.5vw, 40px) !important;
+  line-height: clamp(38.4px, 4.2vw, 48px) !important;
+}
+
+h3 {
+  font-size: 24px;
+  color: #030303;
+  line-height: 24px;
+  text-align: center;
+  font-family: baron;
+}
+h3 span {
+  color: #31871D;
+  text-align: center;
+  font-family: baron;
+}
+
+p {
+  font-size: 16px;
+  color: #030303;
+  line-height: 25.6px;
+  text-align: center;
+  font-weight: 300;
+  font-family: Arial !important;
+}
+p.tagline {
+  font-size: 14px;
+  line-height: 22.4px;
+  text-align: center;
+  font-family: baron !important;
+}
+p.h0 {
+  font-size: clamp(150px, 18vw, 300px) !important;
+  font-family: baron;
+  font-weight: 900;
+  opacity: 3%;
+  position: absolute;
+  bottom: 0%;
+}
+@media (max-width: 700px) {
+  p.h0 {
+    font-size: clamp(75px, 18vw, 150px) !important;
+  }
+}
+p .char,
+p .word,
+p .line {
+  font-size: 16px;
+  color: #030303;
+  line-height: 22.4px;
+  text-align: center;
+}
+
+h1 .word {
+  overflow-y: hidden;
+}
+h1 .word .char {
+  font-family: baron;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  h2.h2 {
+    max-width: 16ch;
+    font-size: clamp(24px, 3.5vw, 32px) !important;
+    line-height: clamp(28.8px, 4.2vw, 38.4px) !important;
+  }
+}
+@media (max-width: 855px) {
+  h2.h2 {
+    font-size: 32px !important;
+    line-height: 38.4px !important;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper p {
+    font-size: 14px;
+    line-height: 22.4px !important;
+  }
+  .wrapper p .char,
+  .wrapper p .word,
+  .wrapper p .line {
+    font-size: 14px !important;
+    line-height: 19.6px !important;
+  }
+  .wrapper h1 {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: clamp(33.6px, 12vw, 48px);
+  }
+  .wrapper h1 .char,
+  .wrapper h1 .word,
+  .wrapper h1 .line {
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: clamp(28px, 10vw, 40px);
+  }
+  .wrapper h2 {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .wrapper h3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 700px) and (max-width: 468px) {
+  h2.h2 {
+    font-size: clamp(22.4px, 8.25vw, 32px) !important;
+    line-height: clamp(28.8px, 4.2vw, 38.4px) !important;
+  }
+}
+button {
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-family: baron;
+  z-index: 100;
+}
+button:hover .slider .slide {
+  transform: translateY(-0.9rem);
+  transition: transform 200ms ease-in-out;
+}
+button .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  max-height: 0.9rem;
+}
+button .slider .slide {
+  font-family: baron;
+  font-size: 14px;
+  transition: transform 200ms ease-out;
+}
+button.primary-button {
+  color: #ffffff;
+  background-color: #31871D;
+  border: 2px solid #31871D;
+}
+button.secondary-button {
+  color: #31871D;
+  background-color: transparent;
+  border: 2px solid #31871D;
+}
+button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button span:nth-child(2) {
+  font-family: baron;
+}
+@media (max-width: 500px) {
+  button.primary-button {
+    color: #ffffff;
+    background-color: #31871D;
+    border: 2px solid #31871D;
+  }
+  button.secondary-button {
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #31871D;
+    padding: 1rem;
+  }
+}
+
+main .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 12rem;
+}
+main .wrapper h1 {
+  max-width: 24ch;
+}
+main .wrapper p {
+  margin-block: 1rem 2rem;
+  max-width: 40ch;
+}/*# sourceMappingURL=style.css.map */
