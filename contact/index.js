@@ -14,3 +14,21 @@ document.addEventListener("click", (e) => {
         dropdown.classList.remove("active")
     })
   })
+
+
+
+//Loading Animations
+
+const h1 = document.querySelector("h1")
+
+gsap.to(h1, {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+});
+gsap.to("main .wrapper p", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  delay:0.25,
+});
+gsap.to("main .wrapper button", {
+  clipPath:"polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+  delay:0.35,
+});
