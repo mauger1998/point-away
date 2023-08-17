@@ -24,6 +24,8 @@ main {
 
         h1 {
             max-width:32ch;
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            transition: clip-path 500ms ease;
         }
 
         // & > .svg-wrapper {
@@ -39,7 +41,12 @@ main {
             margin-block-start:1rem;
             margin-block-end:2rem;
             text-wrap:balance;
-
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            transition: clip-path 500ms ease;
+        }
+        button {
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            transition: clip-path 500ms ease;
         }
     }
 
