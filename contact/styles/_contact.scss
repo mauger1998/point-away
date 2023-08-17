@@ -57,7 +57,13 @@ main {
                 h2 {
                     text-align:left;
                     max-width:20ch;
+                    margin-block-end:1rem;
+                }
+                .social-links {
                     margin-block-end:2rem;
+                    display:flex;
+                    align-items: center;
+                    gap:2rem;
                 }
                 fieldset {
                     border:none;
