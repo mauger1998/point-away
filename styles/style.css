@@ -456,10 +456,7 @@ header .header-wrapper .menu {
   font-weight: 300 !important;
 }
 
-@media (max-width: 1000px) {
-  nav ul {
-    display: none;
-  }
+@media (max-width: 1024px) {
   .dropdown {
     display: block;
   }
