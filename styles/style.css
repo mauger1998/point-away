@@ -1090,10 +1090,17 @@ main {
   display: flex;
   align-items: center;
   gap: 2rem;
+  width: 100%;
+}
+.boards-section .wrapper .boards-images img {
+  width: calc(50% - 1rem);
 }
 @media (max-width: 600px) {
   .boards-section .wrapper .boards-images {
     flex-direction: column;
+    width: 100%;
+  }
+  .boards-section .wrapper .boards-images img {
     width: 100%;
   }
 }
