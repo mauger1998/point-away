@@ -485,7 +485,6 @@ header .header-wrapper .menu {
 }
 main {
   overflow: hidden !important;
-  max-height: 1000px !important;
   position: relative;
 }
 main .wrapper {
@@ -560,6 +559,16 @@ main .wrapper button {
 @media (max-width: 325px) {
   .images-section .wrapper {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+main {
+  height: 90vh;
+  max-height: 1000px !important;
+}
+@media (max-width: 500px) {
+  main {
+    height: 100vh;
   }
 }
 
@@ -1216,8 +1225,13 @@ section {
 }
 
 main {
-  height: 100svh;
+  height: 90vh;
   max-height: 1000px !important;
+}
+@media (max-width: 500px) {
+  main {
+    height: 100vh;
+  }
 }
 
 body {

@@ -6,12 +6,7 @@
 
 main {
     overflow:hidden !important;
-    max-height:1000px !important ;
     position:relative;
-
-
-
- 
     .wrapper {
         display:flex;
         flex-direction: column;
@@ -95,5 +90,13 @@ main {
             grid-template-columns: 1fr 1fr;
         }
                 
+    }
+}
+main {
+    height:90vh;
+    max-height:1000px !important;
+
+    @media (max-width:500px) {
+        height:100vh;
     }
 }

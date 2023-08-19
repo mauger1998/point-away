@@ -53,8 +53,12 @@ section {
 }
 
 main {
-    height:100svh;
+    height:90vh;
     max-height:1000px !important;
+
+    @media (max-width:500px) {
+        height:100vh;
+    }
 }
 
 body {
