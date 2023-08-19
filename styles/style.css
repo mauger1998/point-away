@@ -686,7 +686,7 @@ main {
   }
 }
 .full-section .wrapper .full-right {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/images/seafront-sunday.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/notblurry/full-right.png);
   background-size: cover;
   background-position: center;
   min-height: 60vh;
