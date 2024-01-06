@@ -1,52 +1,33 @@
-@use "./variables";
+@use './variables';
 
 button {
-    padding:0.75rem 1rem;
-    font-weight:700;
+    padding: 0.75rem 1rem;
+    font-weight: 700;
     // transition:opacity 500ms;
-    cursor:pointer;
-    border-radius:2rem;
-    font-family:baron;
+    cursor: pointer;
+    border-radius: 2rem;
+    font-family: baron;
     // transition:300ms ease-in-out;
-    z-index:100;
+    z-index: 100;
+    transition: scale 300ms ease, clip-path 300ms ease !important;
 
-    &:hover .slider .slide {
-        transform:translateY(-0.9rem);
-        transition:transform 200ms ease-in-out;
-    }
-
-    .slider {
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        overflow:hidden;
-        max-height:0.9rem;
-
-        .slide {
-            font-family:baron;
-            font-size: variables.$tagline-font;
-            transition:transform 200ms ease-out;
-            
-
-        }
-
+    &:hover {
+        scale: 0.95;
+        transition: scale 300ms ease, clip-path 300ms ease !important;
     }
 
     &.primary-button {
-        color:variables.$white;
-        background-color:variables.$red;
-        border:2px solid variables.$red;
-
+        color: variables.$white;
+        background-color: variables.$red;
+        border: 2px solid variables.$red;
     }
     &.secondary-button {
-        color:variables.$red;
-        background-color:transparent;
-        border:2px solid variables.$red;
-        
-
+        color: variables.$red;
+        background-color: transparent;
+        border: 2px solid variables.$red;
     }
     span {
-        display:flex;
+        display: flex;
         align-items: center;
         justify-content: center;
 
@@ -55,26 +36,17 @@ button {
         }
     }
 
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         &.primary-button {
-            color:variables.$white;
-            background-color:variables.$red;
-            border:2px solid variables.$red;
-            span { 
-                &:nth-child(2) {
-                }
-            }
+            color: variables.$white;
+            background-color: variables.$red;
+            border: 2px solid variables.$red;
         }
         &.secondary-button {
-            color:variables.$white;
-            background-color:transparent;
-            border:2px solid variables.$red;
-            padding:1rem;
-            span {
-                
-                &:nth-child(2) {
-                }
-            }
+            color: variables.$white;
+            background-color: transparent;
+            border: 2px solid variables.$red;
+            padding: 1rem;
         }
     }
 }

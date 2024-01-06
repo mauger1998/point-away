@@ -273,22 +273,15 @@ button {
   border-radius: 2rem;
   font-family: baron;
   z-index: 100;
+  transition: scale 300ms ease, -webkit-clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease, -webkit-clip-path 300ms ease !important;
 }
-button:hover .slider .slide {
-  transform: translateY(-0.9rem);
-  transition: transform 200ms ease-in-out;
-}
-button .slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden;
-  max-height: 0.9rem;
-}
-button .slider .slide {
-  font-family: baron;
-  font-size: 14px;
-  transition: transform 200ms ease-out;
+button:hover {
+  scale: 0.95;
+  transition: scale 300ms ease, -webkit-clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease, -webkit-clip-path 300ms ease !important;
 }
 button.primary-button {
   color: #ffffff;
@@ -676,8 +669,10 @@ footer .wrapper .footer-bottom a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
   justify-content: flex-end;
+}
+footer .wrapper .footer-bottom a svg {
+  width: 100px;
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px;

@@ -273,22 +273,15 @@ button {
   border-radius: 2rem;
   font-family: baron;
   z-index: 100;
+  transition: scale 300ms ease, -webkit-clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease, -webkit-clip-path 300ms ease !important;
 }
-button:hover .slider .slide {
-  transform: translateY(-0.9rem);
-  transition: transform 200ms ease-in-out;
-}
-button .slider {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden;
-  max-height: 0.9rem;
-}
-button .slider .slide {
-  font-family: baron;
-  font-size: 14px;
-  transition: transform 200ms ease-out;
+button:hover {
+  scale: 0.95;
+  transition: scale 300ms ease, -webkit-clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease !important;
+  transition: scale 300ms ease, clip-path 300ms ease, -webkit-clip-path 300ms ease !important;
 }
 button.primary-button {
   color: #ffffff;
@@ -575,7 +568,7 @@ main {
 .big-text .wrapper h2 {
   font-size: clamp(4rem, 10vw, 10rem);
   line-height: 1;
-  text-align: left;
+  text-align: center;
 }
 @media (max-width: 325px) {
   .big-text .wrapper h2 {
@@ -648,6 +641,42 @@ main {
   }
 }
 
+.new-service-section .wrapper .title {
+  margin-block: 0 4rem;
+}
+.new-service-section .wrapper .title h2 {
+  text-align: left;
+  max-width: 32ch;
+}
+.new-service-section .wrapper .title p {
+  max-width: 60ch;
+  text-align: left;
+  margin-block: 1.5rem 0;
+}
+.new-service-section .wrapper .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 700px) {
+  .new-service-section .wrapper .grid {
+    gap: 1rem;
+  }
+}
+.new-service-section .wrapper .grid .mask {
+  overflow: hidden;
+  display: flex;
+}
+.new-service-section .wrapper .grid .mask img {
+  transition: 300ms scale ease-in-out;
+  transform: translateX(-12rem);
+  opacity: 0;
+}
+.new-service-section .wrapper .grid .mask:hover img {
+  scale: 1.1 !important;
+  transition: 300ms scale ease-in-out;
+}
+
 .full-section .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -655,9 +684,6 @@ main {
   padding-top: 0;
 }
 .full-section .wrapper .full-left {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/images/beach-clean.png);
-  background-size: cover;
-  background-position: center;
   min-height: 60vh;
   max-height: 90vh;
   max-height: 800px;
@@ -667,6 +693,23 @@ main {
   justify-content: flex-end;
   padding: 2rem;
   padding-inline: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.full-section .wrapper .full-left:hover .rectangle {
+  scale: 1.1;
+  transition: 300ms scale ease;
+}
+.full-section .wrapper .full-left .rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/images/beach-clean.png);
+  background-size: cover;
+  background-position: center;
+  inset: 0;
+  z-index: -1;
+  transition: 300ms scale ease;
 }
 .full-section .wrapper .full-left h2 {
   color: white;
@@ -683,18 +726,32 @@ main {
   }
 }
 .full-section .wrapper .full-right {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/notblurry/full-right.png);
-  background-size: cover;
-  background-position: center;
-  min-height: 60vh;
-  max-height: 90vh;
-  max-height: 800px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
   padding: 2rem;
   padding-inline: 4rem;
+  position: relative;
+  min-height: 60vh;
+  max-height: 90vh;
+  max-height: 800px;
+}
+.full-section .wrapper .full-right:hover .rectangle {
+  scale: 1.1;
+  transition: 300ms scale ease;
+}
+.full-section .wrapper .full-right .rectangle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(3, 3, 3, 0.2980392157), rgba(3, 3, 3, 0.2980392157)), url(../public/notblurry/full-right.png);
+  background-size: cover;
+  background-position: center;
+  inset: 0;
+  z-index: -1;
+  transition: 300ms scale ease;
 }
 .full-section .wrapper .full-right h2 {
   color: white;
@@ -948,26 +1005,29 @@ main {
 }
 
 .testimonials-section {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.3137254902), rgba(3, 3, 3, 0.3137254902)), url(../public/images/guernsey-harbour.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.5450980392), rgba(3, 3, 3, 0.5450980392)), url(../public/images/guernsey-harbour.png);
   background-size: cover;
 }
 .testimonials-section .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10rem;
+  gap: 4rem;
   padding-bottom: 2rem;
+}
+.testimonials-section .wrapper .testimonials-title {
+  width: 100%;
 }
 .testimonials-section .wrapper .testimonials-title h2 {
   color: white;
   text-align: left;
-  max-width: 28ch;
+  max-width: 24ch;
 }
 .testimonials-section .wrapper .testimonials-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  width: 60%;
+  width: 100%;
   align-self: flex-end;
 }
 .testimonials-section .wrapper .testimonials-grid .testimonials-card {
@@ -1057,7 +1117,7 @@ main {
 }
 
 .boards-section {
-  background-image: linear-gradient(rgba(3, 3, 3, 0.3882352941), rgba(3, 3, 3, 0.3882352941)), url(../public/images/boards-bg.png);
+  background-image: linear-gradient(rgba(3, 3, 3, 0.5450980392), rgba(3, 3, 3, 0.5450980392)), url(../public/images/boards-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1155,8 +1215,10 @@ footer .wrapper .footer-bottom a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
   justify-content: flex-end;
+}
+footer .wrapper .footer-bottom a svg {
+  width: 100px;
 }
 footer .wrapper .footer-bottom p {
   font-size: 14px;

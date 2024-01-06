@@ -1,18 +1,17 @@
-@use "./variables";
+@use './variables';
 
 .big-text {
     .wrapper {
-        padding-block:0;
+        padding-block: 0;
 
         h2 {
-            font-size:clamp(4rem, 10vw, 10rem);
+            font-size: clamp(4rem, 10vw, 10rem);
             // font-size:10vw;
-            line-height:1;
-            text-align:left;
+            line-height: 1;
+            text-align: center;
 
-            @media (max-width:325px) {
-                font-size:clamp(3rem, 10vw, 4rem);
-
+            @media (max-width: 325px) {
+                font-size: clamp(3rem, 10vw, 4rem);
             }
         }
     }

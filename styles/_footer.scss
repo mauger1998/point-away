@@ -1,83 +1,82 @@
-@use "./variables";
+@use './variables';
 
 footer {
     .wrapper {
-        display:flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-bottom:4rem;
+        padding-bottom: 4rem;
 
         .footer-top {
-            display:flex;
+            display: flex;
             align-items: center;
             justify-content: space-between;
-            gap:2rem;
-            width:100%;
-            padding-block-end:4rem;
+            gap: 2rem;
+            width: 100%;
+            padding-block-end: 4rem;
 
             ul {
-                color:black;
-                display:flex;
+                color: black;
+                display: flex;
                 align-items: center;
-                gap:2rem;
+                gap: 2rem;
             }
             a {
                 svg {
-                    width:200px;
-                    
+                    width: 200px;
                 }
             }
-
-
-            
         }
 
         .footer-bottom {
-            width:100%;
-            display:flex;
+            width: 100%;
+            display: flex;
             align-items: flex-end;
-            gap:2rem;
+            gap: 2rem;
             justify-content: space-between;
-            border-top:1px solid black;
+            border-top: 1px solid black;
             padding-block-start: 4rem;
 
             a {
-                display:flex;
+                display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap:0.5rem;
                 justify-content: flex-end;
+
+                svg {
+                    width: 100px;
+                }
             }
 
             p {
-                font-size:variables.$tagline-font;
-                line-height:1;
+                font-size: variables.$tagline-font;
+                line-height: 1;
             }
         }
     }
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
         .wrapper {
             svg {
-                width:150px !important;
+                width: 150px !important;
             }
         }
     }
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         .wrapper {
             svg {
-                width:125px !important;
+                width: 125px !important;
             }
         }
     }
-    @media (max-width:445px) {
+    @media (max-width: 445px) {
         .wrapper {
             .footer-top {
                 flex-direction: column;
             }
         }
     }
-    @media (max-width:349px) {
+    @media (max-width: 349px) {
         .wrapper {
             .footer-top {
                 flex-direction: column;
