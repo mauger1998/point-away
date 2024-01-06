@@ -1,45 +1,44 @@
-@use "./variables";
-@use "./reset";
-@use "./fonts";
-@use "./button";
-
-
-
+@use './variables';
+@use './reset';
+@use './fonts';
+@use './button';
 
 .video-section {
     .wrapper {
-        display:grid;
-        gap:4rem;
+        display: grid;
+        gap: 4rem;
         grid-template-columns: 1fr 1fr;
-        @media (max-width:900px) {
-                grid-template-columns: 1fr;
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: 700px) {
+            padding-block-end: 0rem !important;
         }
 
         .video-title {
-            display:flex;
+            display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap:2rem;
+            gap: 2rem;
             h2 {
-                max-width:24ch;
-                text-align:left;
+                max-width: 24ch;
+                text-align: left;
             }
             p {
-                max-width:60ch;
-                text-align:left;
+                max-width: 60ch;
+                text-align: left;
             }
         }
 
         video {
-            position:relative;
-            object-fit:cover;
-            height:100%;
-            width:100%;
-            scale:0.5;
-            opacity:0;
-            overflow:hidden !important;  
-
+            position: relative;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            scale: 0.5;
+            opacity: 0;
+            overflow: hidden !important;
         }
     }
 }

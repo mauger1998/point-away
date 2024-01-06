@@ -148,7 +148,7 @@ h2 {
   font-family: baron;
 }
 h2 span {
-  color: #31871D;
+  color: #31871d;
   text-align: center;
   font-family: baron;
 }
@@ -166,7 +166,7 @@ h3 {
   font-family: baron;
 }
 h3 span {
-  color: #31871D;
+  color: #31871d;
   text-align: center;
   font-family: baron;
 }
@@ -285,13 +285,13 @@ button:hover {
 }
 button.primary-button {
   color: #ffffff;
-  background-color: #31871D;
-  border: 2px solid #31871D;
+  background-color: #31871d;
+  border: 2px solid #31871d;
 }
 button.secondary-button {
-  color: #31871D;
+  color: #31871d;
   background-color: transparent;
-  border: 2px solid #31871D;
+  border: 2px solid #31871d;
 }
 button span {
   display: flex;
@@ -304,13 +304,13 @@ button span:nth-child(2) {
 @media (max-width: 500px) {
   button.primary-button {
     color: #ffffff;
-    background-color: #31871D;
-    border: 2px solid #31871D;
+    background-color: #31871d;
+    border: 2px solid #31871d;
   }
   button.secondary-button {
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid #31871D;
+    border: 2px solid #31871d;
     padding: 1rem;
   }
 }
@@ -577,7 +577,7 @@ main {
 }
 
 .green-section {
-  background-color: #31871D;
+  background-color: #31871d;
   color: white;
   position: relative;
   z-index: 0;
@@ -623,7 +623,7 @@ main {
   margin-block: 2rem 1rem;
 }
 .green-section .wrapper .luke-right button {
-  color: #31871D;
+  color: #31871d;
   background-color: white;
   border: 2px solid white;
   margin-block-start: 2rem;
@@ -767,6 +767,11 @@ main {
     padding-inline: 1rem;
   }
 }
+@media (max-width: 700px) {
+  .full-section .wrapper {
+    padding-block-end: 0;
+  }
+}
 @media (max-width: 500px) {
   .full-section .wrapper {
     grid-template-columns: 1fr;
@@ -838,6 +843,11 @@ main {
   }
   .bullet-point-section .wrapper .bullet-point-left .small-images img {
     width: calc(50% - 0.5rem);
+  }
+}
+@media (max-width: 700px) {
+  .bullet-point-section .wrapper {
+    padding-block-end: 0 !important;
   }
 }
 @media (max-width: 600px) {
@@ -920,6 +930,11 @@ main {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 700px) {
+  .video-section .wrapper {
+    padding-block-end: 0rem !important;
+  }
+}
 .video-section .wrapper .video-title {
   display: flex;
   flex-direction: column;
@@ -947,7 +962,7 @@ main {
 }
 
 .green-services-section {
-  background-color: #31871D;
+  background-color: #31871d;
   background-image: url(../public/images/big-guernsey-flag.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -987,7 +1002,7 @@ main {
 }
 .green-services-section .wrapper .green-services-grid .green-services-card {
   padding: 2rem;
-  background-color: #5DAC4B;
+  background-color: #5dac4b;
 }
 @media (max-width: 831px) {
   .green-services-section .wrapper .green-services-grid .green-services-card {
@@ -1095,6 +1110,7 @@ main {
 }
 .feature-walls-section .wrapper .feature-walls-grid-item:first-child {
   margin-block: auto;
+  margin-block-end: 4rem;
 }
 .feature-walls-section .wrapper .feature-walls-grid-item:first-child h2 {
   text-align: left;

@@ -1,14 +1,14 @@
-@use "./variables";
+@use './variables';
 
 @font-face {
     font-family: baron;
     src: url(../Baron-Neue-Black.ttf);
-    font-weight:700;
+    font-weight: 700;
 }
 @font-face {
     font-family: baron;
     src: url(../Baron-Neue.ttf);
-    font-weight:400;
+    font-weight: 400;
 }
 @font-face {
     font-family: inter;
@@ -18,95 +18,90 @@
 *,
 *::before,
 *::after {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: inter;
     scroll-behavior: auto;
-   
 }
 
 body {
-    color:variables.$white;
-    overflow-x:hidden;
+    color: variables.$white;
+    overflow-x: hidden;
 }
 
 img {
-    width:100%;
+    width: 100%;
 
     &.icon {
-        width:2rem;
+        width: 2rem;
     }
 }
 
-
 a {
     text-decoration: none;
-    color:variables.$black !important;
+    color: variables.$black !important;
 }
 
 ul {
-    list-style:none;
+    list-style: none;
 }
 
 section,
 main,
 header,
 footer {
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
 
     .wrapper {
-        width:100%;
-        max-width:1440px;
-        padding:8rem 4rem;
+        width: 100%;
+        max-width: 1440px;
+        padding: 8rem 4rem;
 
         &.wrapper-narrow {
-            padding:8rem 12rem;
+            padding: 8rem 12rem;
         }
     }
 
-    @media (max-width:1250px) {
+    @media (max-width: 1250px) {
         .wrapper-narrow {
-            padding-inline:8rem !important;
+            padding-inline: 8rem !important;
         }
     }
-    @media (max-width:1125px) {
+    @media (max-width: 1125px) {
         .wrapper-narrow {
-            padding-inline:6rem !important;
+            padding-inline: 6rem !important;
         }
     }
-    @media (max-width:1050px) {
+    @media (max-width: 1050px) {
         .wrapper-narrow {
-            padding-inline:4rem !important;
+            padding-inline: 4rem !important;
         }
     }
 
-    @media (max-width:700px) {
+    @media (max-width: 700px) {
         .wrapper {
-            padding-inline:2rem !important;
+            padding-inline: 2rem !important;
         }
     }
 
-    @media (max-width:500px) {
+    @media (max-width: 500px) {
         .wrapper {
-            padding-inline:1rem !important;
+            padding-inline: 1rem !important;
         }
     }
-
-
 }
-
 
 .word,
 .line,
 .char {
-    flex-wrap:none !important;
+    flex-wrap: none !important;
 }
 
 html,
 body {
-    overflow-x:hidden !important;
+    overflow-x: hidden !important;
 }

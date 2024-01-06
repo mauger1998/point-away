@@ -1,70 +1,69 @@
-@use "./variables";
-@use "./reset";
-@use "./fonts";
-@use "./button";
+@use './variables';
+@use './reset';
+@use './fonts';
+@use './button';
 
 .two-columns-section {
-    background-color:variables.$white;
-    position:relative;
+    background-color: variables.$white;
+    position: relative;
 
     .wrapper {
-        display:grid;
+        display: grid;
         grid-template-columns: 1fr 1fr;
 
         .column {
-            display:flex;
+            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding-block:2rem;
+            padding-block: 2rem;
 
             &:nth-child(1) {
-                padding-right:2rem;
+                padding-right: 2rem;
             }
             &:nth-child(2) {
-                border-left:0.5px solid variables.$black;
-                padding-left:2rem;
+                border-left: 0.5px solid variables.$black;
+                padding-left: 2rem;
             }
 
-           h2 {
-            color:variables.$black;
-           }
+            h2 {
+                color: variables.$black;
+            }
 
             p {
-                margin-block:1rem 2rem;
-                max-width:48ch;
-                text-wrap:balance;
-                color:variables.$black;
+                margin-block: 1rem 2rem;
+                max-width: 48ch;
+                text-wrap: balance;
+                color: variables.$black;
             }
         }
     }
 
-    @media (max-width:855px) {
+    @media (max-width: 855px) {
         .wrapper {
             grid-template-columns: 1fr;
-            gap:4rem;
+            gap: 4rem;
 
             .column {
                 &:nth-child(1) {
-                    padding-right:0rem;
+                    padding-right: 0rem;
                 }
-                
-                 &:nth-child(2) {
-                    border-left:none;
-                    padding-left:0rem;
 
-                 }
+                &:nth-child(2) {
+                    border-left: none;
+                    padding-left: 0rem;
+                }
 
-                 p {
-                    max-width:40ch;
-                 }
+                p {
+                    max-width: 40ch;
+                }
             }
         }
     }
-    @media (max-width:402px) {
+    @media (max-width: 402px) {
         .wrapper {
             .column {
-                padding-inline:0;
+                padding-inline: 0;
             }
         }
     }

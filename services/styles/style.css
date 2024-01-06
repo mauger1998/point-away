@@ -148,7 +148,7 @@ h2 {
   font-family: baron;
 }
 h2 span {
-  color: #31871D;
+  color: #31871d;
   text-align: center;
   font-family: baron;
 }
@@ -166,7 +166,7 @@ h3 {
   font-family: baron;
 }
 h3 span {
-  color: #31871D;
+  color: #31871d;
   text-align: center;
   font-family: baron;
 }
@@ -285,13 +285,13 @@ button:hover {
 }
 button.primary-button {
   color: #ffffff;
-  background-color: #31871D;
-  border: 2px solid #31871D;
+  background-color: #31871d;
+  border: 2px solid #31871d;
 }
 button.secondary-button {
-  color: #31871D;
+  color: #31871d;
   background-color: transparent;
-  border: 2px solid #31871D;
+  border: 2px solid #31871d;
 }
 button span {
   display: flex;
@@ -304,13 +304,13 @@ button span:nth-child(2) {
 @media (max-width: 500px) {
   button.primary-button {
     color: #ffffff;
-    background-color: #31871D;
-    border: 2px solid #31871D;
+    background-color: #31871d;
+    border: 2px solid #31871d;
   }
   button.secondary-button {
     color: #ffffff;
     background-color: transparent;
-    border: 2px solid #31871D;
+    border: 2px solid #31871d;
     padding: 1rem;
   }
 }
@@ -602,6 +602,11 @@ main {
   margin: 0;
   display: block;
 }
+@media (max-width: 700px) {
+  .full-services-section .wrapper {
+    padding-block-start: 0 !important;
+  }
+}
 @media (max-width: 600px) {
   .full-services-section .wrapper .full-services-grid {
     grid-template-columns: 1fr 1fr;
@@ -656,7 +661,7 @@ main {
   text-align: left;
 }
 .local-cards-section .wrapper .local-cards .local-card .local-card-left p.tagline {
-  color: #31871D;
+  color: #31871d;
   margin-block-end: 0.5rem;
 }
 .local-cards-section .wrapper .local-cards .local-card .local-card-left p:not(.tagline) {
@@ -678,6 +683,11 @@ main {
   .local-cards-section .wrapper .local-cards .local-card {
     min-height: auto;
     height: 350px;
+  }
+}
+@media (max-width: 700px) {
+  .local-cards-section .wrapper {
+    padding-block: 0 !important;
   }
 }
 @media (max-width: 385px) {
@@ -991,6 +1001,11 @@ main {
     gap: 1rem;
   }
 }
+@media (max-width: 700px) {
+  .external-section .wrapper {
+    padding-block: 0 !important;
+  }
+}
 @media (max-width: 350px) {
   .external-section .wrapper .external-title {
     flex-direction: column;
@@ -1014,14 +1029,15 @@ main {
 .boarded-section .wrapper .boarded-title h2 {
   text-align: left;
   max-width: 28ch;
-  margin-block-end: 8rem;
+  margin-block-end: 4rem;
 }
 .boarded-section .wrapper .boarded-title h3 {
   text-align: left;
   font-family: baron !important;
   font-weight: 400 !important;
   max-width: 40ch;
-  margin-block-end: 2rem;
+  margin-block-end: 1rem;
+  color: #31871d;
 }
 .boarded-section .wrapper .boarded-grid {
   display: grid;
@@ -1030,7 +1046,7 @@ main {
 }
 .boarded-section .wrapper .boarded-grid .boarded-item h3 {
   text-align: left;
-  margin-block: 1rem 1.5rem;
+  margin-block: 1rem 0.5rem;
 }
 .boarded-section .wrapper .boarded-grid .boarded-item p {
   text-align: left;
