@@ -252,19 +252,45 @@
                                 name="_autoresponse"
                                 value="Thank you for contacting Point Away. We are extremely excited and passionate about every project and every customer and we are very greatful for your interest." />
                             <label for="name">name</label>
-                            <input type="text" id="name" name="name" />
+                            <input required type="text" id="name" name="name" />
                         </fieldset>
                         <fieldset>
                             <label for="email">email</label>
-                            <input type="email" id="email" name="email" />
+                            <input
+                                required
+                                type="email"
+                                id="email"
+                                name="email" />
                         </fieldset>
                         <fieldset>
                             <label for="phone">phone</label>
                             <input
+                                required
                                 type="text"
                                 inputmode="numeric"
                                 id="phone"
                                 name="phone" />
+                        </fieldset>
+                        <fieldset
+                            style="
+                                display: flex;
+                                align-items: center;
+                                flex-direction: row;
+                            ">
+                            <fieldset>
+                                <label for="address">address</label>
+                                <input
+                                    type="text"
+                                    id="address"
+                                    name="address" />
+                            </fieldset>
+                            <fieldset>
+                                <label for="postcode">postcode</label>
+                                <input
+                                    type="text"
+                                    id="postcode"
+                                    name="postcode" />
+                            </fieldset>
                         </fieldset>
                         <fieldset>
                             <label for="message">message</label>
